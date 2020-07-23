@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../../scss/organisms/Header.scss'
 
 import Logotipo from '../atoms/Logotipo'
@@ -9,7 +10,9 @@ const Header = () => {
     return (
         <header className="header">
             <div className="header__menu header-margin">
-                <Logotipo />
+                <Link to="/home">
+                    <Logotipo />
+                </Link>
                 <NavBar />
             </div>
             <div className="header-margin">
