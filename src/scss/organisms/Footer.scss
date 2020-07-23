@@ -1,0 +1,18 @@
+@import '../globals.scss';
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: $Font-Paragraph;
+  color: $Color-Grayscale-1;
+  background-color: $Color-Primary;
+}
+
+.footer p {
+  margin: $Spacing-Normal $Spacing-ExtraLarge;
+
+  & span {
+    color: $Color-Primary-2;
+  }
+}

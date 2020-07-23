@@ -1,0 +1,9 @@
+@import '../globals.scss';
+
+.logotipo {
+    width: fit-content;
+    padding: $Spacing-Small;
+    margin: 0 auto;
+    border-radius: $Border-Radius;
+    background-color: $Color-Primary;
+}

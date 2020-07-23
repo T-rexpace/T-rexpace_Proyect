@@ -1,0 +1,84 @@
+@import '../globals.scss';
+@import '../vendors/breakpoints.scss';
+@import '../tokens/colors.scss';
+@import '../tokens/typos.scss';
+@import '../tokens/spacing.scss';
+@import '../vendors/grid.scss';
+@import '../foundations/fonts.scss';
+
+.Sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: nav;
+  height: 100%;
+  color: $Color-Grayscale-1;
+  background-color: $Color-Primary-Light-1;
+
+  @include media (tablet) {
+    display: grid;
+    align-items: inherit;
+    grid-template-rows: auto auto 3fr;
+    grid-row-gap: $Spacing-Small;
+    height: 100vh;
+    padding: $Spacing-ExtraLarge $Spacing-ExtraSmall $Spacing-Small;
+  }
+
+  &__logo {
+    width: 160px;
+    margin-right: $Spacing-Small;
+
+    @include media (tablet) {
+      margin: 0 auto $Spacing-Small;
+    }
+
+    & img {
+      max-width: 100%;
+    }
+  }
+
+  & h3 {
+    font-size: $Font-Paragraph;
+  }
+
+  &__menu {
+    position: fixed;
+    left: -100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+
+    @include media (tablet) {
+      position: static;
+      width: 100%;
+    }
+
+    &>div {
+      height: 70%;
+      overflow-y: auto;
+    }
+
+    & h4 {
+      opacity: .5;
+    }
+  }
+
+  &__link {
+    margin-left: 0;
+    font-size: $Font-Small;
+    color: $Color-Grayscale-1;
+
+    &:hover {
+      color: $Color-Grayscale-4;
+      text-decoration: none;
+    }
+
+    &.active {
+      color: $Color-Primary-2;
+      box-shadow: inset 0 -2.5px $Color-Primary-2;
+    }
+  }
+
+  @include media (mobile-only) {}
+}

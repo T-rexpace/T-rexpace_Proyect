@@ -1,0 +1,18 @@
+@import '../globals.scss';
+
+.modalSuscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 540px;
+    height: 600px;
+    border: 1px solid $Color-Primary;
+    border-radius: $Border-Radius * 2;
+    padding: $Spacing-Large;
+    & p {
+        text-align: center;
+    }
+    & input {
+        width: 100%;
+    }
+}

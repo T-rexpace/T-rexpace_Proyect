@@ -1,0 +1,67 @@
+@import '../globals.scss';
+
+%dropDown-menu {
+    display: none;
+    position: absolute;
+    width: 320px;
+    border: 1px solid $Color-Primary;
+    border-radius: $Border-Radius;
+    background-color: $Color-Grayscale-1;
+    &:hover {
+        display: block;
+    }
+    & p {
+        margin: 0;
+        padding: $Spacing-Small 0;
+        text-align: center;
+    }
+    & p:hover {
+        box-shadow: inset 10px 0 $Color-Secondary;
+    }
+}
+
+.dropDown {
+    position: relative;
+    padding-bottom: $Spacing-Normal;
+    background-color: $Color-Primary;
+    &__order {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        color: $Color-Grayscale-1;
+    }
+    &__order:hover ~ .dropDown__menu {
+        display: block;
+    }
+    &__menu {
+        @extend %dropDown-menu;
+        right: 0;
+        top: $Spacing-Normal - 2;
+        &-velocity:hover ~ .dropDown__velocity {
+            display: block;
+        }
+        &-sighting:hover ~ .dropDown__sighting {
+            display: block;
+        }
+        &-diameter:hover ~ .dropDown__diameter {
+            display: block;
+        }
+    }
+    &__velocity {
+        @extend %dropDown-menu;
+        top: 0;
+        right: 319px;
+    }
+    &__sighting {
+        @extend %dropDown-menu;
+        top: $Spacing-ExtraLarge + $Spacing-Small;
+        right: 319px;
+    }
+    &__diameter {
+        @extend %dropDown-menu;
+        top: ($Spacing-ExtraLarge + $Spacing-Small) * 2;
+        right: 319px;
+    }
+}

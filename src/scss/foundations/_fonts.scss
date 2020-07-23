@@ -1,0 +1,60 @@
+@import '../tokens/typos.scss';
+@import '../tokens/colors.scss';
+@import '../tokens/spacing.scss';
+
+body,
+html {
+  font-family: $Font;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: $Color-Grayscale-8;
+  line-height: 1.2;
+}
+
+.h0 {
+  font-size: $Font-H0;
+  font-weight: $Black;
+}
+
+h1,
+.h1 {
+  font-size: $Font-H1;
+}
+
+h2,
+.h2 {
+  font-size: $Font-H2;
+}
+
+.h2--bb {
+  padding-bottom: $Spacing-Small;
+  margin-bottom: $Spacing-Small;
+  border-bottom: 1px solid $Color-Grayscale-4;
+}
+
+h3 {
+  font-size: $Font-H3;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: $Spacing-ExtraSmall;
+  margin-bottom: $Spacing-ExtraSmall;
+}
+
+p,
+.normal {
+  font-size: $Font-Paragraph;
+  margin-top: 0;
+  margin-bottom: $Spacing-ExtraSmall;
+}
+
+small,
+.small {
+  font-size: $Font-Small;
+}
+
+.bold {
+  font-weight: bolder;
+}

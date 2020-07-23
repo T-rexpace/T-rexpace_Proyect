@@ -1,0 +1,7 @@
+@import  '../globals.scss';
+
+.container__form {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: $Spacing-Large;
+}

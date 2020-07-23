@@ -1,0 +1,122 @@
+@import '../globals.scss';
+@import '../tokens/colors';
+@import '../tokens/spacing';
+
+.ColorCard {
+  border-radius: $Border-Radius;
+  overflow: hidden;
+  box-shadow: 0px 0px 6px 0px rgba(42, 31, 56, 0.20);
+
+  &__color {
+    height: 150px;
+
+    &.primary-2 {
+      background-color: $Color-Primary-2;
+    }
+
+    &.primary {
+      background-color: $Color-Primary;
+    }
+
+    &.primary-light-1 {
+      background-color: $Color-Primary-Light-1;
+    }
+
+    &.primary-light-2 {
+      background-color: $Color-Primary-Light-2;
+    }
+
+    &.primary-light-3 {
+      background-color: $Color-Primary-Light-3;
+    }
+
+    &.primary-dark-1 {
+      background-color: $Color-Primary-Dark-1;
+    }
+
+    &.primary-dark-2 {
+      background-color: $Color-Primary-Dark-2;
+    }
+
+    &.primary-dark-3 {
+      background-color: $Color-Primary-Dark-3;
+    }
+
+    &.secondary {
+      background-color: $Color-Secondary;
+    }
+
+    &.secondary-light-1 {
+      background-color: $Color-Secondary-Light-1;
+    }
+
+    &.secondary-light-2 {
+      background-color: $Color-Secondary-Light-2;
+    }
+
+    &.secondary-light-3 {
+      background-color: $Color-Secondary-Light-3;
+    }
+
+    &.secondary-dark-1 {
+      background-color: $Color-Secondary-Dark-1;
+    }
+
+    &.secondary-dark-2 {
+      background-color: $Color-Secondary-Dark-2;
+    }
+
+    &.secondary-dark-3 {
+      background-color: $Color-Secondary-Dark-3;
+    }
+
+    &.positive {
+      background-color: $Color-Positive;
+    }
+
+    &.negative {
+      background-color: $Color-Negative;
+    }
+
+    &.gradient {
+      background-image: $Gradient;
+    }
+
+    &.color-grayscale-1 {
+      background-color: $Color-Grayscale-1;
+    }
+
+    &.color-grayscale-2 {
+      background-color: $Color-Grayscale-2;
+    }
+
+    &.color-grayscale-3 {
+      background-color: $Color-Grayscale-3;
+    }
+
+    &.color-grayscale-4 {
+      background-color: $Color-Grayscale-4;
+    }
+
+    &.color-grayscale-5 {
+      background-color: $Color-Grayscale-5;
+    }
+
+    &.color-grayscale-6 {
+      background-color: $Color-Grayscale-6;
+    }
+
+    &.color-grayscale-7 {
+      background-color: $Color-Grayscale-7;
+    }
+
+    &.color-grayscale-8 {
+      background-color: $Color-Grayscale-8;
+    }
+  }
+
+  &__details {
+    padding: $Spacing-ExtraSmall;
+    background-color: $Color-Grayscale-2;
+  }
+}

@@ -1,0 +1,19 @@
+@import '../../scss/globals.scss';
+
+.HazardousCard {
+    width: 320px;
+    color: $Color-Grayscale-1;
+    &__indicator {
+        border: 2px solid $Color-Secondary;
+        border-top-left-radius: $Border-Radius * 2;
+        border-top-right-radius: $Border-Radius * 2;
+        border-bottom: none;
+        padding: $Spacing-Normal;
+    }
+    &__list {
+        background-color: $Color-Primary-Light-1;
+        padding: $Spacing-Normal;
+        border-bottom-left-radius: $Border-Radius * 2;
+        border-bottom-right-radius: $Border-Radius * 2;
+    }
+}
