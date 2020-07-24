@@ -7,9 +7,9 @@ import Footer from '../components/molecules/Footer'
 
 const Layout = (props) => {
     return(
-        <div className="layout">
+        <div className="Layout">
             <Header />
-            <div className="layout__content">
+            <div className="Layout__content">
                 {props.children}
             </div>
             <Footer />
