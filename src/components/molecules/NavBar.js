@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import IconColection from '../../images/icons/t-rex-seleccion-de-asteroides-home.svg'
-import IconBirthday from '../../images/icons/regalo-de-cumpelannios.svg'
+import IconColection from '../../images/icons/tarjetas-menu.png'
+import IconBirthday from '../../images/icons/regalo.svg'
 import IconGraphs from '../../images/icons/t-rex-graficas.svg'
 
 import '../../scss/molecules/NavBar.scss'
