@@ -9,13 +9,13 @@ import Button from '../atoms/Button'
 const Header = () => {
     return (
         <header className="header">
-            <div className="header__menu header-margin">
+            <div className="header__menu ml-30">
                 <Link to="/home">
                     <Logotipo />
                 </Link>
                 <NavBar />
             </div>
-            <div className="header-margin">
+            <div className="mr-30">
                 <Button type="normal" />
             </div>
         </header>
