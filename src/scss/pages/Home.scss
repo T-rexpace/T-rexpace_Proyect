@@ -1,23 +1,108 @@
-@import '../globals.scss';
-@import '../vendors/grid';
+@import '../styles.scss';
 
-.HomeBackground {
+.Welcome {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 160px);
   color: $Color-Grayscale-1;
 
-  &__recorrido {
-    position: relative;
+  &__image-rexContainer {
+    position: absolute;
+    top: $Spacing-Large;
+    left: $Spacing-Large - 10;
+    width: 350px;
+  }
 
-    &-rex {
-      position: absolute;
-      top: -$Spacing-Small;
-      left: (-$Spacing-Large * 3) - 10;
-      width: 200px;
-    }
+  & h1 {
+    margin-top: 100px;
+    line-height: .8;
   }
 }
 
-.welcome {
+.AsteroidsDetails {
+  position: relative;
   display: flex;
   align-items: center;
-  height: 100%;
+  height: calc(100vh - 160px);
+}
+
+.AsteroidVisualizer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 490px;
+
+  &__item {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &.first {
+      left: 100px;
+    }
+
+    &.second {
+      left: 40px;
+      top: 100px;
+    }
+
+    &.third {
+      right: 180px;
+      top: 50px;
+    }
+
+    &.fourth {
+      bottom: 90px;
+      left: 140px;
+    }
+
+    &.fifth {
+      right: 200px;
+      bottom: 100px;
+    }
+
+    &.sixth {
+      right: 90px;
+      bottom: 200px;
+    }
+  }
+
+  &__dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin-top: $Spacing-ExtraSmall;
+    border-radius: 50%;
+    cursor: pointer;
+    background: radial-gradient(circle, rgba(234, 82, 70, 1) 0%, rgba(209, 6, 106, 1) 100%);
+  }
+
+  & .wave {
+    width: 30px;
+    height: 30px;
+    opacity: .5;
+    border-radius: 50%;
+    background: $Gradient;
+    animation: wave 3s ease-out infinite;
+  }
+
+  &__earthContainer {
+    max-width: 200px;
+  }
+}
+
+.T-rexContainer {
+  & h2 {
+    line-height: 1;
+  }
+
+  & span {
+    font-size: 54px;
+    letter-spacing: 3px;
+  }
 }

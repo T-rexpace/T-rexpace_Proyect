@@ -1,6 +1,7 @@
 @import './tokens/colors.scss';
 @import './tokens/typos.scss';
 @import './tokens/spacing.scss';
+@import './foundations/fonts.scss';
 
 $Box-Shadow: 0px 0px 6px 0px $Color-Secondary;
 $Border-Radius: 10px;
@@ -47,28 +48,12 @@ code {
   margin: $Spacing-ExtraSmall 0 $Spacing-Normal;
 }
 
-::-webkit-scrollbar {
-  width: .5em;
-}
-
-::-webkit-scrollbar-track {
-  border-radius: 50px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 50px;
-  background: $Gradient;
-  box-shadow: $Box-Shadow;
-}
-
 /* Utilities */
 
-$max: 50;
-$offset: 5;
-$unit: 'px';
-
 @mixin spacing-loop($className, $styleName) {
+  $max: 50;
+  $offset: 5;
+  $unit: 'px';
   $i: 0;
 
   @while $i <=$max {

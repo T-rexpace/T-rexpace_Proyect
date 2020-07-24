@@ -53,6 +53,11 @@ img {
   @extend %clearfix;
 }
 
+.row {
+  display: flex;
+  justify-content: center;
+}
+
 [class*='column-'] {
   float: left;
   padding: $Spacing-Normal;
