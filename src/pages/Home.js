@@ -1,11 +1,29 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useRef, useEffect, useState } from 'react'
 import Button from '../components/atoms/Button'
 import '../scss/pages/Home.scss'
+import AsteroidVisualizer from '../components/organisms/AsteroidVisualizer'
 
 import tourBegins from '../images/icons/t-rex-comienza-el-recorrido.svg'
 import selectAndAsteroid from '../images/icons/t-rex-seleccion-de-asteroides.svg'
 
 const Home = () => {
+  const AsteroidsDetails = useRef(null)
+  const [show, setShow] = useState(false)
+
+  useEffect(function() {
+    const observer = new window.IntersectionObserver(function(entries) {
+      const { isIntersecting } = entries[0]
+      if (isIntersecting) {
+        setShow(true)
+        observer.disconnect()
+      }
+    },
+    {
+      rootMargin: '0px',
+    })
+    observer.observe(AsteroidsDetails.current)
+  }, [AsteroidsDetails])
+
   return(
     <Fragment>
       <section className="Welcome">
@@ -40,79 +58,36 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="AsteroidsDetails">
-        <div className="wrapper">
-          <div className="row">
-            <div className="column-6">
-              <Button
-                type="normal"
-                title="Comparar"
-              />
-              <div className="AsteroidVisualizer">
-                <figure className="AsteroidVisualizer__earthContainer">
-                  <img
-                    className="AsteroidVisualizer__earth"
-                    src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8a17076c-e556-41a8-9980-f45c6e337959/earth.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20200724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20200724T052238Z&X-Amz-Expires=86400&X-Amz-Signature=90f5d061e7849d463eadd25fdeba766f578f54cb69a5c1f0319f97d4e3f333cf&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22earth.png%22"
-                    alt="Planeta Tierra"
-                    width="200"
-                  />
-                </figure>
-                <div className="AsteroidVisualizer__item first">
-                  <span className="text-uppercase">Name</span>
-                  <div className="AsteroidVisualizer__dot">
-                    <div className="wave"></div>
-                  </div>
-                </div>
-                <div className="AsteroidVisualizer__item second">
-                  <span className="text-uppercase">Name</span>
-                  <div className="AsteroidVisualizer__dot">
-                    <div className="wave"></div>
-                  </div>
-                </div>
-                <div className="AsteroidVisualizer__item third">
-                  <span className="text-uppercase">Name</span>
-                  <div className="AsteroidVisualizer__dot">
-                    <div className="wave"></div>
-                  </div>
-                </div>
-                <div className="AsteroidVisualizer__item fourth">
-                  <span className="text-uppercase">Name</span>
-                  <div className="AsteroidVisualizer__dot">
-                    <div className="wave"></div>
-                  </div>
-                </div>
-                <div className="AsteroidVisualizer__item fifth">
-                  <span className="text-uppercase">Name</span>
-                  <div className="AsteroidVisualizer__dot">
-                    <div className="wave"></div>
-                  </div>
-                </div>
-                <div className="AsteroidVisualizer__item sixth">
-                  <span className="text-uppercase">Name</span>
-                  <div className="AsteroidVisualizer__dot">
-                    <div className="wave"></div>
-                  </div>
-                </div>
+      <section className="AsteroidsDetails" ref={ AsteroidsDetails }>
+        {
+          show && <div className="wrapper">
+            <div className="row">
+              <div className="column-6">
+                <Button
+                  type="normal--disabled"
+                  title="Comparar"
+                />
+                <AsteroidVisualizer />
               </div>
-            </div>
-            <div className="column-4">
-              <div className="T-rexContainer text-center">
-                <figure>
-                  <img
-                    src={ selectAndAsteroid }
-                    alt="Dinosaurio te solicita escoger un asteroide"
-                    width="310"
-                  />
-                </figure>
-                <h2 className="text-uppercase">
-                  Selecciona un <br/>
-                  <span>asteroide</span>
-                </h2>
-                <p>para ver su información</p>
+              <div className="column-4">
+                <div className="T-rexContainer text-center">
+                  <figure>
+                    <img
+                      src={ selectAndAsteroid }
+                      alt="Dinosaurio te solicita escoger un asteroide"
+                      width="310"
+                    />
+                  </figure>
+                  <h2 className="text-uppercase">
+                    Selecciona un <br/>
+                    <span>asteroide</span>
+                  </h2>
+                  <p>para ver su información</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        }
       </section>
     </Fragment>
   )
