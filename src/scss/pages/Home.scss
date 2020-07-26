@@ -1,5 +1,6 @@
 @import '../styles.scss';
 
+//-------------------------------  Welcome
 .Welcome {
   position: relative;
   display: flex;
@@ -18,29 +19,11 @@
     margin-top: 100px;
     line-height: .8;
   }
-}
 
-.AsteroidsDetails {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: calc(100vh - 160px);
-  min-height: 200px;
-
-  &>.wrapper {
-    opacity: 0;
-    animation: fadeInUp .7s ease-out .5s forwards;
-    will-change: transform, opacity;
-  }
-}
-
-.T-rexContainer {
-  & h2 {
-    line-height: 1;
-  }
-
-  & span {
-    font-size: 54px;
-    letter-spacing: 3px;
+  &__image-capsuleContainer {
+    position: absolute;
+    top: 11%;
+    right: -13%;
+    width: 1000px;
   }
 }

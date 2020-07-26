@@ -34,6 +34,10 @@ li {
   list-style: none;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 code {
   padding: 0 $Spacing-ExtraSmall 2px;
   margin-right: $Spacing-ExtraSmall;
