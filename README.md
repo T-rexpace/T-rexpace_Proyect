@@ -54,14 +54,12 @@ If you want to run this proyect in your localhost.
 3. Execute the developer enviroment: `npm run start`
 
 ## API
-
 * [api-nasa](https://github.com/jsv1280/api-nasa "api-nasa") 
 
 ## License
 * [MIT](https://es.wikipedia.org/wiki/Licencia_MIT "MIT")
 
 ## Authors 
-
 * [Jairo Salazar](https://github.com/jsv1280 "Jairo Salazar") Backend Developer
 * [Felipe Merchan](https://github.com/FelipeMerchan "Felipe Merchan") Frontend Developer
 * [Juan Gaybre](https://github.com/Gaybre "Juan Gaybre") Frontend Developer
