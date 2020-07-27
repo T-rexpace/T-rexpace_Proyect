@@ -1,31 +1,74 @@
-#T-REXPACE
+#T-rexpace
+> Your asteroids observatory
 
-T-REX PACE wants that you have approach to the cosmos. Through an asteroid's visualization system. You'll have a friend who will company you in this travel.
+<center>![](https://github.com/T-rexpace/Design-System/blob/develop/src/images/brand/logo-readme.JPG?raw=true)
+</center>
+## Objective
+Put user approach at cosmos through our asteroid visualizer system, a dynamic and attractive web App.
 
-You will can do:
+## General details
+##### Concept
+The user start a trip
 
-- See asteroids and all their information.
-- Compare the asteroids that you choose.
-- Look at the asteroid that will be close to Earth on your birthday.
-- Play to memorama.
+##### value proposal
+A guide of 150 million years ago will be the companion on the tour
+> If you want to know more about, maybe you are interested read our [identity manual](https://drive.google.com/file/d/1T6OwAUqiJVu0lh9EGTANKgOegvvFd0pk/view?usp=sharing "identity manual")
 
-## Installation
+##Guide for User
 
-    npm install
+##### Functions
+User can:
 
-## Run
+* See all colection of asteroids information and images.
+* Compare data between asteroids that you choose.
+* Will to know the closest asteroid to earth on your birthday
+* Play a Memomrama game
 
-Development
+> You can try our Web App [here](# "here")
 
-    npm run dev
+##Guide for Developer
+##### Technologies used
+* React JS
+* Sass
 
-Production
-Npm run build
+##### Dependencies and packages
+* react: 16.13.1
+* react-dom: 16.13.1
+* react-router-dom: 5.2.0
 
-    npm run build
+##### Developer Dependencies
+* css-loader: 3.6.0
+* mini-css-extract-plugin: 0.9.0
+* node-sass: 4.14.1
+* sass-loader: 9.0.2
 
-## Testing
+> This project was built with [create-react-app](https://github.com/facebook/create-react-app#creating-an-app "create-react-app"), so there are more packages as a default in the initial installation.
 
-Npm run test
+## Install
+If you want to run this proyect in your localhost.
 
-    npm run test
+1. Clone repo. `git clone https://github.com/T-rexpace/T-rexpace_Proyect.git`
+2. Install dependencies: `npm install`
+3. Execute the developer enviroment: `npm run start`
+
+## API
+
+* [api-nasa](https://github.com/jsv1280/api-nasa "api-nasa") 
+
+## License
+* [MIT](https://es.wikipedia.org/wiki/Licencia_MIT "MIT")
+
+## Authors 
+
+* [Jairo Salazar](https://github.com/jsv1280 "Jairo Salazar") Backend Developer
+* [Felipe Merchan](https://github.com/FelipeMerchan "Felipe Merchan") Frontend Developer
+* [Juan Gaybre](https://github.com/Gaybre "Juan Gaybre") Frontend Developer
+
+## Thankfulness
+* [Joshua P. Cruz](https://github.com/JoshuaPCruz "Joshua P. Cruz") Coach Platzi Master
+
+
+
+------------
+
+![](https://raw.githubusercontent.com/T-rexpace/Design-System/d3da8241fc401973557288ba99087b6e07541140/src/images/icons/t-rex-graficas.svg )
