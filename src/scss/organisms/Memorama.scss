@@ -1,0 +1,21 @@
+@import '../styles.scss';
+
+.Memorama {
+  padding-top: 100px;
+
+  &>.wrapper {
+    opacity: 0;
+    animation: fadeInUp .7s ease-out .5s forwards;
+    will-change: transform, opacity;
+  }
+
+  & span {
+    font-size: 50px;
+    text-transform: capitalize;
+    letter-spacing: 25px;
+  }
+
+  & .btn__normal {
+    margin-top: $Spacing-Large;
+  }
+}

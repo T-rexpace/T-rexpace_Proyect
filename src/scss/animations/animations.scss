@@ -8,3 +8,15 @@
     transform: scale(2);
   }
 }
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(350px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

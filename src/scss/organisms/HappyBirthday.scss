@@ -1,0 +1,20 @@
+.HappyBirthday {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 160px);
+
+  &>.wrapper {
+    opacity: 0;
+    animation: fadeInUp .7s ease-out .5s forwards;
+    will-change: transform, opacity;
+  }
+
+  & .row {
+    display: flex;
+    align-items: center;
+  }
+
+  & figure {
+    max-width: 75%;
+  }
+}
