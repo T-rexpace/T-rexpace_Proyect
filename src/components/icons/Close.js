@@ -4,7 +4,7 @@ function Close(props) {
   return (
     <svg width={28} height={27} fill="none" {...props}>
       <path
-        stroke="#4B3866"
+        stroke={ `${ props.color || "#4B3866" }` }
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"

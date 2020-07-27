@@ -6,6 +6,7 @@
     width: 320px;
     border: 1px solid $Color-Primary;
     border-radius: $Border-Radius;
+    color: $Color-Primary;
     background-color: $Color-Grayscale-1;
     &:hover {
         display: block;
@@ -21,9 +22,9 @@
 }
 
 .dropDown {
+    z-index: $Zindex-DropDown;
     position: relative;
     padding-bottom: $Spacing-Normal;
-    background-color: $Color-Primary;
     &__order {
         display: inline-block;
         position: absolute;

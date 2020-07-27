@@ -5,8 +5,8 @@ import '../../scss/atoms/Checkbox.scss'
 const Checkbox = (props) => {
     return(
         <div className="checkbox">
-            <input type="checkbox" id="check1" defaultChecked={ props.check }/>
-            <label htmlFor="check1">{ props.label || "Check me!" }</label>
+            <input type="checkbox" id={ props.id } defaultChecked={ props.check }/>
+            <label htmlFor={ props.id }>{ props.label || "Check me!" }</label>
         </div>
     )
 }
