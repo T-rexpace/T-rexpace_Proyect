@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/T-rexpace_Proyect/static/css/main.cf7b42a4.chunk.css",
+    "main.js": "/T-rexpace_Proyect/static/js/main.d1439668.chunk.js",
+    "main.js.map": "/T-rexpace_Proyect/static/js/main.d1439668.chunk.js.map",
+    "runtime-main.js": "/T-rexpace_Proyect/static/js/runtime-main.68780dfb.js",
+    "runtime-main.js.map": "/T-rexpace_Proyect/static/js/runtime-main.68780dfb.js.map",
+    "static/js/2.b3939708.chunk.js": "/T-rexpace_Proyect/static/js/2.b3939708.chunk.js",
+    "static/js/2.b3939708.chunk.js.map": "/T-rexpace_Proyect/static/js/2.b3939708.chunk.js.map",
+    "index.html": "/T-rexpace_Proyect/index.html",
+    "precache-manifest.4a93dcdd599543a8f30051b4955ece45.js": "/T-rexpace_Proyect/precache-manifest.4a93dcdd599543a8f30051b4955ece45.js",
+    "service-worker.js": "/T-rexpace_Proyect/service-worker.js",
+    "static/css/main.cf7b42a4.chunk.css.map": "/T-rexpace_Proyect/static/css/main.cf7b42a4.chunk.css.map",
+    "static/js/2.b3939708.chunk.js.LICENSE.txt": "/T-rexpace_Proyect/static/js/2.b3939708.chunk.js.LICENSE.txt",
+    "static/media/demoAsteroide.jpg": "/T-rexpace_Proyect/static/media/demoAsteroide.5828f3e7.jpg",
+    "static/media/logotipo-negativo-color-corporativo.svg": "/T-rexpace_Proyect/static/media/logotipo-negativo-color-corporativo.841ef2d6.svg",
+    "static/media/planeta-tierra.png": "/T-rexpace_Proyect/static/media/planeta-tierra.a488a13c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.68780dfb.js",
+    "static/js/2.b3939708.chunk.js",
+    "static/css/main.cf7b42a4.chunk.css",
+    "static/js/main.d1439668.chunk.js"
+  ]
+}
