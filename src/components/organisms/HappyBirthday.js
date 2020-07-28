@@ -1,9 +1,9 @@
 import React from 'react'
 import { useNearScreen } from '../../hooks/useNearScreen'
 
-import Button from '../atoms/Button'
 import '../../scss/organisms/HappyBirthday.scss'
-import happyBirthday from '../../images/icons/t-rex-feliz-cumpleannios.svg'
+import Button from '../atoms/Button'
+import { URL_IMAGES_REX } from '../atoms/UrlImages'
 
 const HappyBirthday = () => {
   const [show, element] = useNearScreen()
@@ -16,7 +16,7 @@ const HappyBirthday = () => {
             <div className="column-5">
               <figure>
                 <img
-                  src={ happyBirthday }
+                  src={ `${URL_IMAGES_REX}t-rex-feliz-cumpleannios.svg` }
                   alt="T-Rex te desea feliz cumpleaños"
                   width="390"
                 />

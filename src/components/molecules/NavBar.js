@@ -2,10 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../../scss/molecules/NavBar.scss'
 
-import IconColection from '../../images/icons/tarjetas-menu.png'
-import IconBirthday from '../../images/icons/regalo.svg'
-import IconGraphs from '../../images/icons/t-rex-graficas.svg'
 import Arrow from '../icons/Arrow'
+import { URL_IMAGES_REX } from '../atoms/UrlImages'
 
 const NavBar = () => {
   return (
@@ -26,7 +24,7 @@ const NavBar = () => {
 			<div className="navbar__submenu">
 				<Link to="/cards-colection" className="navbar__submenu-link">
 					<img 
-						src={ IconColection } 
+						src={ `${URL_IMAGES_REX}tarjetas-menu.png` } 
 						alt="IconnColection" 
 						className="icon"
 					/>
@@ -34,7 +32,7 @@ const NavBar = () => {
 				</Link>
 				<Link to="birthday" className="navbar__submenu-link">
 					<img 
-						src={ IconBirthday } 
+						src={ `${URL_IMAGES_REX}regalo.svg` } 
 						alt="IconnBirthday" 
 						className="icon"
 					/>
@@ -42,7 +40,7 @@ const NavBar = () => {
 				</Link>
 				<Link to="graphs" className="navbar__submenu-link">
 					<img 
-						src={ IconGraphs } 
+						src={ `${URL_IMAGES_REX}t-rex-graficas.svg` } 
 						alt="IconnGraphs" 
 						className="icon"
 					/>

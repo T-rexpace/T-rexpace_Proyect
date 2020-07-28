@@ -1,8 +1,7 @@
 #T-rexpace
 > Your asteroids observatory
 
-<center>![](https://github.com/T-rexpace/Design-System/blob/develop/src/images/brand/logo-readme.JPG?raw=true)
-</center>
+![](http://ec2-54-234-62-6.compute-1.amazonaws.com:8080/static/images/brand/imagotipo/imagotipo-positivo-color.svg)
 
 ## Objective
 Put user approach at cosmos through our asteroid visualizer system, a dynamic and attractive web App.
@@ -15,7 +14,7 @@ The user start a trip
 A guide of 150 million years ago will be the companion on the tour
 > If you want to know more about, maybe you are interested read our [identity manual](https://drive.google.com/file/d/1T6OwAUqiJVu0lh9EGTANKgOegvvFd0pk/view?usp=sharing "identity manual")
 
-##Guide for User
+## Guide for User
 
 #### Functions
 User can:
@@ -27,7 +26,7 @@ User can:
 
 > You can try our Web App [here](# "here")
 
-##Guide for Developer
+## Guide for Developer
 
 #### Technologies used
 * React JS

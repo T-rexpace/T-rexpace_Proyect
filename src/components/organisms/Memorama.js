@@ -1,9 +1,9 @@
 import React from 'react'
 import { useNearScreen } from '../../hooks/useNearScreen'
 
-import Button from '../atoms/Button'
 import '../../scss/organisms/Memorama.scss'
-import memoramaCards from '../../images/icons/t-rex-tarjetas-memorama.svg'
+import Button from '../atoms/Button'
+import { URL_IMAGES_REX } from '../atoms/UrlImages'
 
 const Memorama = () => {
   const [show, element] = useNearScreen()
@@ -26,7 +26,7 @@ const Memorama = () => {
             <div className="column-4">
               <figure>
                 <img
-                  src={ memoramaCards }
+                  src={ `${URL_IMAGES_REX}t-rex-tarjetas-memorama.svg` }
                   alt="Tarjetas del memorama"
                   width="407"
                 />

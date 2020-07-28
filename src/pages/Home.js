@@ -6,9 +6,8 @@ import HappyBirthday from '../components/organisms/HappyBirthday'
 import Memorama from '../components/organisms/Memorama'
 import DiscoveryAsteroid from '../components/organisms/DiscoveryAsteroid'
 
-import Arrow from '../components/icons/Arrow'
-import tourBegins from '../images/icons/t-rex-comienza-el-recorrido.svg'
-import capsule from '../images/capsula-espacial.png'
+import  Arrow from '../components/icons/Arrow'
+import { URL_IMAGES_REX, URL_IMAGES } from '../components/atoms/UrlImages'
 
 const Home = () => {
   return(
@@ -22,7 +21,7 @@ const Home = () => {
             <div className="column-2">
               <figure className="Welcome__image-rexContainer">
                 <img
-                  src={ tourBegins }
+                  src={ `${URL_IMAGES_REX}t-rex-comienza-el-recorrido.svg` }
                   className="Welcome__image-rex"
                   alt="Comienza el recorrido"
                   width="350"
@@ -42,7 +41,7 @@ const Home = () => {
             <div className="column-6">
               <figure className="Welcome__image-capsuleContainer">
                 <img
-                  src={ capsule }
+                  src={ `${URL_IMAGES}capsula-espacial.png`}
                   alt="Cápsula espacial"
                   width="1000"
                 />

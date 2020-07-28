@@ -28,7 +28,6 @@ class Colection extends React.Component {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
         },
-        // http://ec2-54-234-62-6.compute-1.amazonaws.com:8080/static/images/Orion.jpg
         body: JSON.stringify({query: `{ getNeos(first: 6, skip:${this.state.page}) { 
             _id, 
             name, 

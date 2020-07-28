@@ -2,8 +2,7 @@ import React from 'react'
 import { useNearScreen } from '../../hooks/useNearScreen'
 
 import '../../scss/organisms/DiscoveryAsteroid.scss'
-import tRexGraphics from '../../images/icons/t-rex-graficas.svg'
-import asteroid from '../../images/asteroide-peligroso.png'
+import { URL_IMAGES_REX, URL_IMAGES } from '../atoms/UrlImages'
 
 const DiscoveryAsteroid = () => {
   const [show, element] = useNearScreen()
@@ -32,14 +31,14 @@ const DiscoveryAsteroid = () => {
             <div className="column-5">
               <figure className="DiscoveryAsteroid__asteroid">
                 <img
-                  src={ asteroid }
+                  src={ `${URL_IMAGES}asteroide-peligroso.png` }
                   alt="Asteroide peligroso"
                   width="520"
                 />
               </figure>
               <figure className="DiscoveryAsteroid__t-rex">
                 <img
-                  src={ tRexGraphics }
+                  src={ `${URL_IMAGES_REX}t-rex-graficas.svg` }
                   alt="T-Rex viendo asteroide"
                   width="250"
                 />

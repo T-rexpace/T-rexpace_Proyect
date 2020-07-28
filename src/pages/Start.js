@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import '../scss/pages/Start.scss'
 
 import Button from '../components/atoms/Button'
-import Bienvenida from '../images/icons/t-rex-bienvenida.svg'
+import { URL_IMAGES_REX } from '../components/atoms/UrlImages'
 
 const Start = () => {
     return(
@@ -18,7 +18,7 @@ const Start = () => {
                 </div>
                 <div className="column-6 text-center welcome__image">
                     <figure>
-                        <img src={ Bienvenida } alt="Bienvenida" />
+                        <img src={ `${URL_IMAGES_REX}t-rex-bienvenida.svg` } alt="Bienvenida" />
                     </figure>
                 </div>
             </div>

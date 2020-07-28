@@ -1,10 +1,11 @@
 import React from 'react'
 import { useNearScreen } from '../../hooks/useNearScreen'
 
-import AsteroidVisualizer from '../organisms/AsteroidVisualizer'
 import '../../scss/organisms/AsteroidsDetails.scss'
+import AsteroidVisualizer from '../organisms/AsteroidVisualizer'
 import Button from '../atoms/Button'
-import selectAndAsteroid from '../../images/icons/t-rex-seleccion-de-asteroides.svg'
+import { URL_IMAGES_REX } from '../atoms/UrlImages'
+
 
 const AsteroidsDetails = (props) => {
   const [show, element] = useNearScreen()
@@ -25,7 +26,7 @@ const AsteroidsDetails = (props) => {
               <div className="T-rexContainer text-center">
                 <figure>
                   <img
-                    src={ selectAndAsteroid }
+                    src={ `${URL_IMAGES_REX}t-rex-seleccion-de-asteroides.svg` }
                     alt="T-Rex te solicita escoger un asteroide"
                     width="253"
                   />

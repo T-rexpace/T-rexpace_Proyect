@@ -1,10 +1,11 @@
 import React from 'react'
 import '../../scss/molecules/AsteroidCard.scss'
 
-import Inofensivo from '../../images/icons/t-rex-asteroide-inofensivo.svg'
-import Peligroso from '../../images/icons/t-rex-asteroide-peligroso.svg'
+
+
 import Checkbox from '../atoms/Checkbox'
 import imageDemo from '../../images/demoAsteroide.jpg'
+import { URL_IMAGES_REX, URL_IMAGES } from '../atoms/UrlImages'
 
 const AsteroidCard = (props) => {
 	
@@ -20,20 +21,18 @@ const AsteroidCard = (props) => {
 		estimated_diameter:{kilometers:{ estimated_diameter_max }},
 	} = props.data
 
-	const URL_IMAGE = `http://ec2-54-234-62-6.compute-1.amazonaws.com:8080/static/images/`
-
 	return (
 		<div className="asteroidCard">
 			<div className="asteroidCard__picture">
 				<div className="asteroidCard__picture-asteroid">
 					<figure>
-						<img src={ `${URL_IMAGE}${ image }` || imageDemo } alt={ name } />
+						<img src={ `${URL_IMAGES}${ image }` || imageDemo } alt={ name } />
 					</figure>
 				</div>
 				<div className="asteroidCard__picture-indicator">
 					{ is_potentially_hazardous_asteroid 
-						? <img src={ Peligroso } alt={ name } />
-						: <img src={ Inofensivo } alt={ name } />
+						? <img src={ `${URL_IMAGES_REX}t-rex-asteroide-peligroso.svg` } alt={ name } />
+						: <img src={ `${URL_IMAGES_REX}t-rex-asteroide-inofensivo.svg` } alt={ name } />
 					}
 				</div>
 				<div className="asteroidCard__picture-velocity">
