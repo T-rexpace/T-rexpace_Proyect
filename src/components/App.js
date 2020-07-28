@@ -8,7 +8,7 @@ import Colection from '../pages/Colection'
 
 const App = () => {
   return(
-    <BrowserRouter>
+    <BrowserRouter basename="T-rexpace_Proyect">
       <Layout>
         <Switch>
           <Route exact path="/" component={ Start } />
