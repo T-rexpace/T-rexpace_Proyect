@@ -6,12 +6,17 @@ import HappyBirthday from '../components/organisms/HappyBirthday'
 import Memorama from '../components/organisms/Memorama'
 import DiscoveryAsteroid from '../components/organisms/DiscoveryAsteroid'
 
+import Arrow from '../components/icons/Arrow'
 import tourBegins from '../images/icons/t-rex-comienza-el-recorrido.svg'
+import capsule from '../images/capsula-espacial.png'
 
 const Home = () => {
   return(
     <Fragment>
       <section className="Welcome">
+        <a className="ScrollDown" href="#asteroidDetails">
+          <Arrow />
+        </a>
         <div className="wrapper">
           <div className="row">
             <div className="column-2">
@@ -37,7 +42,7 @@ const Home = () => {
             <div className="column-6">
               <figure className="Welcome__image-capsuleContainer">
                 <img
-                  src="../../images/capsula-espacial.png"
+                  src={ capsule }
                   alt="Cápsula espacial"
                   width="1000"
                 />
@@ -46,7 +51,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <AsteroidsDetails />
+      <AsteroidsDetails id="asteroidDetails"/>
       <HappyBirthday />
       <Memorama />
       <DiscoveryAsteroid />

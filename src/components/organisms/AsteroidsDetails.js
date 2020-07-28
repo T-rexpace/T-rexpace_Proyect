@@ -6,11 +6,11 @@ import '../../scss/organisms/AsteroidsDetails.scss'
 import Button from '../atoms/Button'
 import selectAndAsteroid from '../../images/icons/t-rex-seleccion-de-asteroides.svg'
 
-const AsteroidsDetails = () => {
+const AsteroidsDetails = (props) => {
   const [show, element] = useNearScreen()
 
   return(
-    <section className="AsteroidsDetails" ref={ element }>
+    <section className="AsteroidsDetails" ref={ element } id={ props.id }>
       {
         show && <div className="wrapper">
           <div className="row">

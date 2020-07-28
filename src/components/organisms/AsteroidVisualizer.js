@@ -1,6 +1,7 @@
 import React from 'react'
 
 import '../../scss/organisms/AsteroidVisualizer.scss'
+import earth from '../../images/planeta-tierra.png'
 
 const AsteroidVisualizer = () => {
   return(
@@ -8,7 +9,7 @@ const AsteroidVisualizer = () => {
       <figure className="AsteroidVisualizer__earthContainer">
         <img
           className="AsteroidVisualizer__earth"
-          src="../../planeta-tierra.png"
+          src={ earth }
           alt="Planeta Tierra"
           width="200"
         />
