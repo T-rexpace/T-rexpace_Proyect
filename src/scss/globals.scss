@@ -6,6 +6,7 @@
 $Box-Shadow: 0px 0px 6px 0px $Color-Secondary;
 $Border-Radius: 10px;
 $Zindex-Header: 5;
+$Zindex-DropDown: 4;
 
 * {
   box-sizing: border-box;
@@ -110,4 +111,9 @@ code {
 .bg-primary {
   color: $Color-Grayscale-1;
   background-color: $Color-Primary;
+}
+// arrow-icon
+.arrow {
+  transform: scaleY(-1);
+  margin: 0 0 -6px 10px;
 }

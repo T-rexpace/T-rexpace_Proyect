@@ -15,16 +15,16 @@ const NavBar = () => {
 				className="navbar__menu menu"
 			>
 				Asteroides
-				<Arrow  className="arrow"/>
+				<Arrow color="#fff" className="arrow" />
 			</Link>
 			<Link 
-				to="#"
+				to="/memorama"
 				className="navbar__menu"
 			>
 				Memorama
 			</Link>
 			<div className="navbar__submenu">
-				<Link to="#" className="navbar__submenu-link">
+				<Link to="/cards-colection" className="navbar__submenu-link">
 					<img 
 						src={ IconColection } 
 						alt="IconnColection" 
@@ -32,7 +32,7 @@ const NavBar = () => {
 					/>
 					Colección
 				</Link>
-				<Link to="#" className="navbar__submenu-link">
+				<Link to="birthday" className="navbar__submenu-link">
 					<img 
 						src={ IconBirthday } 
 						alt="IconnBirthday" 
@@ -40,7 +40,7 @@ const NavBar = () => {
 					/>
 					Cumpleaños
 				</Link>
-				<Link to="#" className="navbar__submenu-link">
+				<Link to="graphs" className="navbar__submenu-link">
 					<img 
 						src={ IconGraphs } 
 						alt="IconnGraphs" 

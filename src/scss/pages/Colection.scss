@@ -1,0 +1,19 @@
+@import '../styles.scss';
+
+.cardsColection {
+  background-color: $Color-Grayscale-5;
+  &__options {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__options-switch {
+    display: flex;
+    align-items: center;
+  }
+  &__cards {
+    flex-wrap: wrap;
+  }
+  &__cards-item {
+    width: auto;
+  }
+}

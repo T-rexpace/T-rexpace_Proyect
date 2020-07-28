@@ -1,6 +1,8 @@
 import React from 'react'
 import '../../scss/molecules/OrderDropdown.scss'
 
+import Arrow from '../icons/Arrow'
+
 const OrderDropdown = () => {
 
     const moreVelocity = () => alert('moreVelocity')
@@ -12,7 +14,9 @@ const OrderDropdown = () => {
 
     return(
         <div className="dropDown">
-            <p className="dropDown__order">Ordenar por »</p>
+            <p className="dropDown__order">
+                Ordenar por <Arrow color="#fff" className="arrow" />
+            </p>
             <div className="dropDown__menu">
                 <p className="dropDown__menu-velocity h2--bb">
                     Velocidad

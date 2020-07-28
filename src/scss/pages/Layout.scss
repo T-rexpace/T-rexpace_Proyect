@@ -6,9 +6,8 @@
   height: 100vh;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header"
-    "content"
-    "footer";
+  grid-template-areas:  "header"
+                        "content";
 
   &__content {
     grid-area: content;
