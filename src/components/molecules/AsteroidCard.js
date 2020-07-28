@@ -11,7 +11,7 @@ const AsteroidCard = (props) => {
 	const {
 		_id,
 		name,
-		// image_url:{static/images/NOMBRE_IMAGEN.jpg},
+		image,
 		is_potentially_hazardous_asteroid,
 		orbital_data: { first_observation_date },
 		orbital_data: { last_observation_date },
@@ -20,12 +20,14 @@ const AsteroidCard = (props) => {
 		estimated_diameter:{kilometers:{ estimated_diameter_max }},
 	} = props.data
 
+	const URL_IMAGE = `http://ec2-54-234-62-6.compute-1.amazonaws.com:8080/static/images/`
+
 	return (
 		<div className="asteroidCard">
 			<div className="asteroidCard__picture">
 				<div className="asteroidCard__picture-asteroid">
 					<figure>
-						<img src={ imageDemo } alt={ name } />
+						<img src={ `${URL_IMAGE}${ image }` || imageDemo } alt={ name } />
 					</figure>
 				</div>
 				<div className="asteroidCard__picture-indicator">

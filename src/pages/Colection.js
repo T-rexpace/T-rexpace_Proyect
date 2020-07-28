@@ -28,10 +28,12 @@ class Colection extends React.Component {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
         },
-        body: JSON.stringify({query: `{ getNeos(first: 4, skip:${this.state.page}) { 
+        // http://ec2-54-234-62-6.compute-1.amazonaws.com:8080/static/images/Orion.jpg
+        body: JSON.stringify({query: `{ getNeos(first: 6, skip:${this.state.page}) { 
             _id, 
             name, 
             absolute_magnitude_h, 
+            image,
             is_potentially_hazardous_asteroid, 
             estimated_diameter { 
               kilometers { 
@@ -63,8 +65,8 @@ class Colection extends React.Component {
       this.setState({
         loading:false,
         error: null,
-        page: this.state.page + 1, //11:08
-        asteroids: dataNeos
+        page: this.state.page + 1,
+        asteroids: [].concat(this.state.asteroids, dataNeos)
       })  
     } catch( error ) {
       this.setState({
@@ -120,18 +122,19 @@ class Colection extends React.Component {
 
           <div className="row cardsColection__cards">
             { //------------------------ logica cardsColection 
+              this.state.asteroids.length &&
               this.getCards()
             }
           </div>
 
-          { //------------------------
+          { //------------------------ Loader
             this.state.loading &&
             <div className="text-center">
               <Loader />
             </div>
           }
 
-          {
+          { //------------------------ Button traer más
             !this.state.loading &&
               <div className="row">
                 <div className="column-12 text-center">
