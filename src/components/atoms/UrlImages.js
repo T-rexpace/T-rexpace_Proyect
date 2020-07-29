@@ -1,4 +1,4 @@
-export const URL_IMAGES = `http://ec2-54-234-62-6.compute-1.amazonaws.com:8080/static/images/`
+export const URL_IMAGES = `http://ec2-54-234-62-6.compute-1.amazonaws.com:8080/public/images/`
 
 export const URL_IMAGES_REX = `${ URL_IMAGES }t-rex/`
 

@@ -2,7 +2,6 @@ import React from 'react'
 import '../scss/pages/Colection.scss'
 
 import AsteroidCard from '../components/molecules/AsteroidCard'
-import Button from '../components/atoms/Button'
 
 import { graphql } from 'react-apollo'
 import { gql } from 'apollo-boost'

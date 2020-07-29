@@ -81,7 +81,7 @@ class Colection extends React.Component {
 
   getCards = () => {
     return this.state.asteroids.map( item => (
-      <div 
+      <div
         className="column-4 cardsColection__cards-item"
         key={ item._id }
       >
