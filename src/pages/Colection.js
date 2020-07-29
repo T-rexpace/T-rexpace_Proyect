@@ -119,12 +119,12 @@ class Colection extends React.Component {
             </div>
           </div>
 
-          <div className="row cardsColection__cards">
             { //------------------------ logica cardsColection 
               this.state.asteroids.length &&
-              this.getCards()
+                <div className="row cardsColection__cards">
+                  { this.getCards() }
+                </div>
             }
-          </div>
 
           { //------------------------ Loader
             this.state.loading &&

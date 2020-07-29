@@ -8,7 +8,7 @@ import imageDemo from '../../images/demoAsteroide.jpg'
 import { URL_IMAGES_REX, URL_IMAGES } from '../atoms/UrlImages'
 
 const AsteroidCard = (props) => {
-	
+	console.log(props)
 	const {
 		_id,
 		name,
