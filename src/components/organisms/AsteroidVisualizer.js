@@ -5,7 +5,7 @@ import AsteroidVisualizerItem from '../molecules/AsteroidVisualizerItem'
 import '../../scss/organisms/AsteroidVisualizer.scss'
 import earth from '../../images/planeta-tierra.png'
 
-const AsteroidVisualizerComponent = ({ data: { getNeos = [] } }) => {
+const AsteroidVisualizerComponent = ({ data: { getNeos = [] }, handleClick }) => {
   return(
     <div className="AsteroidVisualizer">
       <figure className="AsteroidVisualizer__earthContainer">
@@ -17,7 +17,12 @@ const AsteroidVisualizerComponent = ({ data: { getNeos = [] } }) => {
         />
       </figure>
       {
-        getNeos.map(asteroid => <AsteroidVisualizerItem key={ asteroid._id } {...asteroid} className="first" />)
+        getNeos.map(asteroid => <AsteroidVisualizerItem
+          key={ asteroid._id }
+          name={ asteroid.name }
+          handleClick={ handleClick }
+          className="first"
+        />)
       }
     </div>
   )
