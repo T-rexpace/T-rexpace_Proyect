@@ -1,0 +1,22 @@
+@import '../styles.scss';
+
+.memorama__options {
+  position: relative;
+  & img {
+    position: absolute;
+    bottom: 0;
+    left: 150px;
+    width: 250px;
+  }
+  & button {
+    margin: $Spacing-Small;
+  }
+}
+.memorama__timer {
+  background-color: $Color-Primary;
+}
+.memorama__cards-grid {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: $Spacing-Small;
+}

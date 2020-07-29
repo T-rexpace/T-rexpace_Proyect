@@ -1,0 +1,18 @@
+@import '../styles.scss';
+
+.playerDataTable {
+  // background-color: $Color-Grayscale-2;
+  background-color: rgba(240, 238, 243, .4);
+  padding: $Spacing-Normal;
+  border-radius: $Border-Radius * 2;
+  color: $Color-Primary;
+  &__subtitle {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 $Spacing-ExtraLarge 0 $Spacing-Small;
+  }
+  & PlayerData {
+    margin: $Spacing-Normal;
+  }
+
+}

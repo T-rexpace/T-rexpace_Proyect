@@ -6,6 +6,7 @@ import Start from '../pages/Start'
 import Home from '../pages/Home'
 import Colection from '../pages/Colection'
 import { Colection2 } from '../pages/Colection2'
+import Memorama from '../pages/Memorama'
 
 const App = () => {
   return(
@@ -16,6 +17,7 @@ const App = () => {
           <Route exact path="/home" component={ Home } />
           <Route exact path="/cards-colection" component={ Colection } />
           <Route exact path="/cards-colection2" component={ Colection2 } />
+          <Route exact path="/memorama" component={ Memorama } /> 
         </Switch>
       </Layout>
     </BrowserRouter>
