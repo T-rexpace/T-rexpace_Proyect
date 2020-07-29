@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 
 import '../scss/pages/Home.scss'
-import AsteroidsDetails from '../components/organisms/AsteroidsDetails'
+import { AsteroidsDetails } from '../components/organisms/AsteroidsDetails'
 import HappyBirthday from '../components/organisms/HappyBirthday'
 import Memorama from '../components/organisms/Memorama'
 import DiscoveryAsteroid from '../components/organisms/DiscoveryAsteroid'

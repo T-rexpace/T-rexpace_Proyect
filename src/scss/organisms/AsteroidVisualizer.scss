@@ -7,64 +7,6 @@
   align-items: center;
   height: 490px;
 
-  &__item {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    &.first {
-      left: 100px;
-    }
-
-    &.second {
-      left: 40px;
-      top: 100px;
-    }
-
-    &.third {
-      right: 180px;
-      top: 50px;
-    }
-
-    &.fourth {
-      bottom: 90px;
-      left: 140px;
-    }
-
-    &.fifth {
-      right: 200px;
-      bottom: 100px;
-    }
-
-    &.sixth {
-      right: 90px;
-      bottom: 200px;
-    }
-  }
-
-  &__dot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    margin-top: $Spacing-ExtraSmall;
-    border-radius: 50%;
-    cursor: pointer;
-    background: radial-gradient(circle, rgba(234, 82, 70, 1) 0%, rgba(209, 6, 106, 1) 100%);
-  }
-
-  & .wave {
-    width: 30px;
-    height: 30px;
-    opacity: .5;
-    border-radius: 50%;
-    background: $Gradient;
-    animation: wave 3s ease-out infinite;
-    will-change: transform, opacity;
-  }
-
   &__earthContainer {
     max-width: 200px;
   }

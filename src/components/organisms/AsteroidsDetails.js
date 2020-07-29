@@ -1,29 +1,34 @@
-import React from 'react'
-import { useNearScreen } from '../../hooks/useNearScreen'
+import React, { useState } from 'react'
+import fetchAsteroids from '../../hoc/fetchAsteroids'
 
 import '../../scss/organisms/AsteroidsDetails.scss'
-import AsteroidVisualizer from '../organisms/AsteroidVisualizer'
+import { AsteroidVisualizer } from '../organisms/AsteroidVisualizer'
+import AsteroidCard from '../molecules/AsteroidCard'
 import Button from '../atoms/Button'
 import { URL_IMAGES_REX } from '../atoms/UrlImages'
 
+const AsteroidsDetailsComponent = ({ id, data: { getNeos = [] }}) => {
+  const [isSelected, setIsSelected] = useState(false)
 
-const AsteroidsDetails = (props) => {
-  const [show, element] = useNearScreen()
+  const handleClick = e => {
+    setIsSelected(true)
+    console.log('clicked')
+  }
 
   return(
-    <section className="AsteroidsDetails" ref={ element } id={ props.id }>
-      {
-        show && <div className="wrapper">
-          <div className="row">
-            <div className="column-6">
-              <Button
-                type="normal--disabled"
-                title="Comparar"
-              />
-              <AsteroidVisualizer />
-            </div>
-            <div className="column-4">
-              <div className="T-rexContainer text-center">
+    <section className="AsteroidsDetails" id={ id }>
+      <div className="wrapper">
+        <div className="row">
+          <div className="column-6">
+            <Button
+              type="normal--disabled"
+              title="Comparar"
+            />
+            <AsteroidVisualizer handleClick={ handleClick } />
+          </div>
+          <div className="column-4">
+            {
+              isSelected ? <AsteroidCard data={ getNeos } /> : <div className="T-rexContainer text-center">
                 <figure>
                   <img
                     src={ `${URL_IMAGES_REX}t-rex-seleccion-de-asteroides.svg` }
@@ -37,12 +42,12 @@ const AsteroidsDetails = (props) => {
                 </h2>
                 <p>para ver su información</p>
               </div>
-            </div>
+            }
           </div>
         </div>
-      }
+      </div>
     </section>
   )
 }
 
-export default AsteroidsDetails
+export const AsteroidsDetails = fetchAsteroids(AsteroidsDetailsComponent)

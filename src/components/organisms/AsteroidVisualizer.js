@@ -1,9 +1,11 @@
 import React from 'react'
+import fetchAsteroids from '../../hoc/fetchAsteroids'
 
+import AsteroidVisualizerItem from '../molecules/AsteroidVisualizerItem'
 import '../../scss/organisms/AsteroidVisualizer.scss'
 import earth from '../../images/planeta-tierra.png'
 
-const AsteroidVisualizer = () => {
+const AsteroidVisualizerComponent = ({ data: { getNeos = [] }, handleClick }) => {
   return(
     <div className="AsteroidVisualizer">
       <figure className="AsteroidVisualizer__earthContainer">
@@ -14,44 +16,16 @@ const AsteroidVisualizer = () => {
           width="200"
         />
       </figure>
-      <div className="AsteroidVisualizer__item first">
-        <span className="text-uppercase">Name</span>
-        <div className="AsteroidVisualizer__dot">
-          <div className="wave"></div>
-        </div>
-      </div>
-      <div className="AsteroidVisualizer__item second">
-        <span className="text-uppercase">Name</span>
-        <div className="AsteroidVisualizer__dot">
-          <div className="wave"></div>
-        </div>
-      </div>
-      <div className="AsteroidVisualizer__item third">
-        <span className="text-uppercase">Name</span>
-        <div className="AsteroidVisualizer__dot">
-          <div className="wave"></div>
-        </div>
-      </div>
-      <div className="AsteroidVisualizer__item fourth">
-        <span className="text-uppercase">Name</span>
-        <div className="AsteroidVisualizer__dot">
-          <div className="wave"></div>
-        </div>
-      </div>
-      <div className="AsteroidVisualizer__item fifth">
-        <span className="text-uppercase">Name</span>
-        <div className="AsteroidVisualizer__dot">
-          <div className="wave"></div>
-        </div>
-      </div>
-      <div className="AsteroidVisualizer__item sixth">
-        <span className="text-uppercase">Name</span>
-        <div className="AsteroidVisualizer__dot">
-          <div className="wave"></div>
-        </div>
-      </div>
+      {
+        getNeos.map(asteroid => <AsteroidVisualizerItem
+          key={ asteroid._id }
+          name={ asteroid.name }
+          handleClick={ handleClick }
+          className="first"
+        />)
+      }
     </div>
   )
 }
 
-export default AsteroidVisualizer
+export const AsteroidVisualizer = fetchAsteroids(AsteroidVisualizerComponent)
