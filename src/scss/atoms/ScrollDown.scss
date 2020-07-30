@@ -1,0 +1,15 @@
+@import '../styles.scss';
+
+.ScrollDown {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  animation: pulsation 1s infinite alternate;
+  will-change: opacity;
+  transform: translateX(50%) rotate(180deg);
+
+  &.fadeOut {
+    animation: fadeOutUp .5s ease-out;
+    will-change: opacity;
+  }
+}

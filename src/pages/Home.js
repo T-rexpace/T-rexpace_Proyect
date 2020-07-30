@@ -1,21 +1,32 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 
-import '../scss/pages/Home.scss'
+import ScrollDown from '../components/atoms/ScrollDown'
+import ScrollUp from '../components/atoms/ScrollUp'
 import { AsteroidsDetails } from '../components/organisms/AsteroidsDetails'
 import HappyBirthday from '../components/organisms/HappyBirthday'
 import Memorama from '../components/organisms/Memorama'
 import DiscoveryAsteroid from '../components/organisms/DiscoveryAsteroid'
+import '../scss/pages/Home.scss'
 
-import  Arrow from '../components/icons/Arrow'
 import { URL_IMAGES_REX, URL_IMAGES } from '../components/atoms/UrlImages'
 
 const Home = () => {
+  const [ShowUp, setShowUp] = useState(false)
+
+  useEffect(function () {
+    const onScroll = event => {
+      const show = window.scrollY < window.innerHeight
+      ShowUp != show && setShowUp(show)
+    }
+
+    document.addEventListener('scroll', onScroll)
+  })
+
   return(
     <Fragment>
-      <section className="Welcome">
-        <a className="ScrollDown" href="#asteroidDetails">
-          <Arrow />
-        </a>
+      <section className="Welcome" id="welcomeSection">
+        { !ShowUp && <ScrollDown /> }
+        <ScrollUp id="#welcomeSection" />
         <div className="wrapper">
           <div className="row">
             <div className="column-2">
@@ -29,13 +40,12 @@ const Home = () => {
               </figure>
             </div>
             <div className="column-4">
-              <h1 className="h0 mb-40">Near<br />
-                <span className="h3">Earth Objects</span>
+              <h1 className="h0">Descubramos<br />
+                <span className="h2">el cosmos</span>
               </h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing 
-                elit, sed do eiusmod tempor incididunt ut labore 
-                et dolore magna aliqua. Ut enim ad minim veniam.
+                Acompáñame en este grandioso viaje donde aprenderemos 
+                más sobre el cosmos
               </p>
             </div>
             <div className="column-6">
