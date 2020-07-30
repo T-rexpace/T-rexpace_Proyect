@@ -1,48 +1,30 @@
-import React from 'react'
+import React, { useState, Fragment, useEffect }  from 'react'
 import '../scss/pages/Colection.scss'
+import fetchAsteroids from '../hoc/fetchAsteroids'
 
 import AsteroidCard from '../components/molecules/AsteroidCard'
-
-import { graphql } from 'react-apollo'
-import { gql } from 'apollo-boost'
-
-const getAsteroids = graphql(gql`
-{ getNeos (first: 4) {
-  _id,
-  name,
-  absolute_magnitude_h,
-  image,
-  is_potentially_hazardous_asteroid,
-  close_approach_data {
-    relative_velocity {
-      kilometers_per_hour
-    }
-  },
-  estimated_diameter {
-    kilometers {
-      estimated_diameter_min,
-      estimated_diameter_max
-    }
-  },
-  orbital_data {
-    first_observation_date,
-    last_observation_date
-    orbital_period,
-    perihelion_distance,
-  }
-} }
-`)
+import Button from '../components/atoms/Button'
 
 const ColectionList = ({data: { getNeos = [] } }) => {
-  // console.log(props)
-  return getNeos.map( neo => (
+  
+
+const listNeos = getNeos.map( neo => (
     <div
-      className="column-4 cardsColection__cards-item"
-      key={ neo._id }
+    className="column-4 cardsColection__cards-item"
+    key={ neo._id }
     >
       <AsteroidCard data={ neo } />
     </div>
   ))
+  
+  return(
+    <Fragment>
+      <div className="text-center">
+        <Button type="normal" title="ir a las graficas" />
+      </div>
+      {listNeos}
+    </Fragment>
+  )
 }
 
-export const Colection2 = getAsteroids(ColectionList)
+export const Colection2 = fetchAsteroids(ColectionList)

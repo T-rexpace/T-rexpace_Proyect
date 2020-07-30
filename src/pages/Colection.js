@@ -13,7 +13,7 @@ class Colection extends React.Component {
     this.state = {
       loading: true,
       error: null,
-      page: 1,
+      page: 0,
       asteroids: []
     }
   }
@@ -64,7 +64,7 @@ class Colection extends React.Component {
       this.setState({
         loading:false,
         error: null,
-        page: this.state.page + 1,
+        page: this.state.page + 6,
         asteroids: [].concat(this.state.asteroids, dataNeos)
       })  
     } catch( error ) {

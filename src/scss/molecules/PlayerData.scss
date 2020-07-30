@@ -5,6 +5,7 @@
     justify-content: space-between;
     width: 500px;
     border-radius: $Border-Radius;
-    border: 1px solid $Color-Primary;
     padding: $Spacing-ExtraSmall $Spacing-Small;
+    margin: $Spacing-ExtraSmall;;
+    background-color: $Color-Grayscale-1;
 }

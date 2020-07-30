@@ -12,7 +12,7 @@ The user start a trip
 
 ### value proposal
 A guide of 150 million years ago will be the companion on the tour
-> If you want to know more about, maybe you are interested read our [identity manual](https://drive.google.com/file/d/1T6OwAUqiJVu0lh9EGTANKgOegvvFd0pk/view?usp=sharing "identity manual")
+> If you want to know more about, maybe you are interested read our [identity manual](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/dd032446-b804-407c-a16a-acf65b8d4a06/MANUAL_DE_MARCA_T-REXSPACE_29JUL2020.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20200730%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20200730T050631Z&X-Amz-Expires=86400&X-Amz-Signature=b909bfa0afae25bf0e1bf4daeb14abaf162b794cccc397c71b7c44502cabc8f4&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22MANUAL%2520DE%2520MARCA_T-REXSPACE_29JUL2020.pdf%22 "identity manual")
 
 ## 👪 Guide for User
 
@@ -30,19 +30,24 @@ User can:
 
 ### Documentation with collaborative tools
 * [Diagram in Coggle](https://coggle.it/diagram/XtbitZFlE5NOJ5LE/t/project "Diagram in Coggle")
-* [Journey in Miro](https://coggle.it/diagram/XtbitZFlE5NOJ5LE/t/project "Journey in Miro")
+* [Flujo de tareas](https://drive.google.com/file/d/1M3Ssdpb7lUk4KYdvXeXzVKigwli-TLH3/view "Flujo de tareas")
+* [Journey in Miro](https://miro.com/app/board/o9J_kqlmqgY=/ "Journey in Miro")
 * [Prototype in Figma](https://www.figma.com/file/twDIAdKtvxVAW2muvqbKXL/project-platzi-master__DesignSystem-(Copy)?node-id=0%3A1 "Prototype in Figma")
 * [Code guidelines in Notion](https://www.notion.so/Gu-as-de-c-digo-5bf127faad29437c9cee598179ff08b7 "Code guidelines in Notion")
-* [Design System for devs in gh-pages](https://t-rexpace.github.io/design-system/ "Design System for devs")
+* [Design System for devs in gh-pages](https://t-rexpace.github.io/Design-System/ "Design System for devs")
 
 ### Technologies used
 * React JS
+* Graphql
 * Sass
 
 ### Dependencies and packages
 * react: 16.13.1
 * react-dom: 16.13.1
 * react-router-dom: 5.2.0
+* react-apollo: 3.1.5
+* apollo-boost: 0.4.9
+* recharts: 1.8.5
 
 ### Developer Dependencies
 * css-loader: 3.6.0
@@ -60,7 +65,8 @@ If you want to run this proyect in your localhost.
 3. Execute the developer enviroment: `npm run start`
 
 ## 🗃 API
-* [api-nasa](https://github.com/jsv1280/api-nasa "api-nasa") 
+* [api-nasa](https://github.com/jsv1280/api-nasa "api-nasa")
+> This custom api was possible thanks for [Asteroids-NeoWs](https://api.nasa.gov/ "Asteroids-NeoWs")
 
 ## 🔑 License
 * [MIT](https://es.wikipedia.org/wiki/Licencia_MIT "MIT")
@@ -72,3 +78,8 @@ If you want to run this proyect in your localhost.
 
 ## 💽 Thankfulness
 * [Joshua P. Cruz](https://github.com/JoshuaPCruz "Joshua P. Cruz") Coach Platzi Master
+
+## Similar Proyects
+* [NeoBit](https://github.com/WS-Jedp/NeoBit "NeoBit")
+* [CommetCat](https://github.com/rafeldev/comeet-cat "CommetCat")
+* [Asteroids](https://github.com/ArzateCompany/asteroids "Asteroids")
