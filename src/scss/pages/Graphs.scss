@@ -1,0 +1,17 @@
+@import '../styles.scss';
+
+.graphs {
+  .img-rex {
+    margin-right: $Spacing-ExtraLarge * 5;
+    width: 200px;
+  }
+  &__hazardous-cards {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.graphs-content {
+  background-color: rgba($color: $Color-Primary, $alpha: .6); 
+  border-radius: $Border-Radius * 2;
+}

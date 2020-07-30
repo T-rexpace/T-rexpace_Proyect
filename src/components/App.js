@@ -8,6 +8,7 @@ import Colection from '../pages/Colection'
 import { Colection2 } from '../pages/Colection2'
 import Memorama from '../pages/Memorama'
 import NotFound from '../pages/NotFound'
+import Graphs from '../pages/Graphs'
 
 const App = () => {
   return(
@@ -19,6 +20,7 @@ const App = () => {
           <Route exact path="/cards-colection" component={ Colection } />
           <Route exact path="/cards-colection2" component={ Colection2 } />
           <Route exact path="/memorama" component={ Memorama } />
+          <Route exact path="/graphs" component={ Graphs } />
           <Route component={ NotFound } />
         </Switch>
       </Layout>

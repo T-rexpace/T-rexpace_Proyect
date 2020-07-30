@@ -4,10 +4,10 @@ import { gql } from 'apollo-boost'
 const fetchAsteroids = graphql(gql`
   query {
     getNeos(first: 6) {
-      _id
-      name
-      absolute_magnitude_h
-      image
+      _id,
+      name,
+      absolute_magnitude_h,
+      image,
       is_potentially_hazardous_asteroid,
       close_approach_data {
         relative_velocity {
@@ -22,9 +22,9 @@ const fetchAsteroids = graphql(gql`
       }
       orbital_data {
         first_observation_date,
-        last_observation_date
+        last_observation_date,
         orbital_period,
-        perihelion_distance,
+        perihelion_distance
       }
     }
   }

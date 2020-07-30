@@ -64,10 +64,10 @@ const AsteroidCard = (props) => {
 					</div>
 				</div>
 				<div>
-					<p className="asteroidCard__details-title">Diametro(km)</p>
+					<p className="asteroidCard__details-title">Diametro</p>
 					<div className="asteroidCard__details-diameter">
-						<p><small>mínimo: { estimated_diameter_min }</small></p>
-						<p><small>máximo: { estimated_diameter_max }</small></p>
+						<p><small>mínimo: <br /> { estimated_diameter_min.toFixed(4) } km</small></p>
+						<p><small>máximo: <br /> { estimated_diameter_max.toFixed(4) } km</small></p>
 					</div>
 				</div>
 				<Checkbox 

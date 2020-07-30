@@ -1,13 +1,15 @@
-@import '../styles.scss';
+@import '../globals.scss';
 
-.playerDataTable {
+.tableGraphData {
+  width: fit-content;
   padding: $Spacing-Normal;
   border-radius: $Border-Radius * 2;
-  color: $Color-Primary;
   background-color: rgba(240, 238, 243, .4);
   &__subtitle {
     display: flex;
     justify-content: space-between;
     margin: 0 $Spacing-Small;
+    font-weight: $Bold;
+    color: $Color-Grayscale-1;
   }
 }

@@ -11,10 +11,10 @@ const PlayerDataTable = () => {
       </h3>
       <div className="playerDataTable__subtitle">
         <p>Posición</p>
-        <p>Name</p>
-        <p>Score</p>
+        <p>Nombre</p>
+        <p>Tiempo record</p>
       </div>
-      <PlayerData className="mb-50" />
+      <PlayerData />
       <PlayerData />
       <PlayerData />
       <PlayerData />

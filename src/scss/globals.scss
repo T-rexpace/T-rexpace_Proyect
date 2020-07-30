@@ -107,6 +107,14 @@ code {
   text-align: left;
 }
 
+.title-hover {
+  transition: 400ms;
+}
+.title-hover:hover {
+  color: $Color-Secondary;
+  text-shadow: 0px 0px 4px $Color-Secondary;
+}
+
 //Background
 .bg-primary {
   color: $Color-Grayscale-1;
