@@ -30,7 +30,7 @@ const NavBar = () => {
 					/>
 					Colección
 				</Link>
-				<Link to="birthday" className="navbar__submenu-link">
+				<Link to="/page-in-construction" className="navbar__submenu-link">
 					<img 
 						src={ `${URL_IMAGES_REX}regalo.svg` } 
 						alt="IconnBirthday" 

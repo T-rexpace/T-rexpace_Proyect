@@ -1,0 +1,18 @@
+@import '../styles.scss';
+
+.ScrollUp {
+  position: absolute;
+  bottom: 10%;
+  right: 2%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  will-change: opacity;
+  background-color: $Color-Secondary;
+  box-shadow: 0px 4px 10px 0 rgba(255, 255, 255, .6);
+  animation: fadeInUp .5s ease-out;
+}

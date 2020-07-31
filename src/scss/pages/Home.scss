@@ -2,15 +2,6 @@
 
 //-------------------------------  Welcome
 
-.ScrollDown {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  animation: pulsation 1s infinite alternate;
-  will-change: opacity;
-  transform: translateX(50%) rotate(180deg);
-}
-
 .Welcome {
   position: relative;
   display: flex;
@@ -31,7 +22,12 @@
 
   & h1 {
     margin-top: 100px;
+    margin-bottom: $Spacing-Normal;
     line-height: .8;
+
+    &>span {
+      letter-spacing: 20px;
+    }
   }
 
   &__image-capsuleContainer {

@@ -7,6 +7,8 @@ import Home from '../pages/Home'
 import Colection from '../pages/Colection'
 import { Colection2 } from '../pages/Colection2'
 import Memorama from '../pages/Memorama'
+import PageInConstruction from '../pages/PageInConstruction'
+import NotFound from '../pages/NotFound'
 import Graphs from '../pages/Graphs'
 
 const App = () => {
@@ -18,8 +20,10 @@ const App = () => {
           <Route exact path="/home" component={ Home } />
           <Route exact path="/cards-colection" component={ Colection } />
           <Route exact path="/cards-colection2" component={ Colection2 } />
-          <Route exact path="/memorama" component={ Memorama } /> 
+          <Route exact path="/memorama" component={ Memorama } />
           <Route exact path="/graphs" component={ Graphs } />
+          <Route exact path="/page-in-construction" component={ PageInConstruction } />
+          <Route component={ NotFound } />
         </Switch>
       </Layout>
     </BrowserRouter>

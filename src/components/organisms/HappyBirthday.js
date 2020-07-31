@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useNearScreen } from '../../hooks/useNearScreen'
 
 import '../../scss/organisms/HappyBirthday.scss'
@@ -31,10 +32,12 @@ const HappyBirthday = () => {
                 aproximación cercano a la tierra en fechas 
                 próximas al día de tu cumpleaños.
               </p>
-              <Button
-                type="normal"
-                title="Descubrir"
-              />
+              <Link to="/page-in-construction">
+                <Button
+                  type="normal"
+                  title="Descubrir"
+                />
+              </Link>
             </div>
           </div>
         </div>
