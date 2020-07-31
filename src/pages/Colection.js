@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../scss/pages/Colection.scss'
 
 import Switch from '../components/atoms/Switch'
@@ -14,7 +15,11 @@ class Colection extends React.Component {
       loading: true,
       error: null,
       page: 0,
-      asteroids: []
+      asteroids: [],
+      forGraphs: [],
+      newFilter: [],
+      potentially_hazardous: false,
+      velocity: 0
     }
   }
 
@@ -79,20 +84,122 @@ class Colection extends React.Component {
     this.fetchNeos()
   }
 
-  getCards = () => {
-    return this.state.asteroids.map( item => (
+  getID =(id) =>{
+    !this.state.forGraphs.includes(id) &&
+      this.setState({
+        forGraphs: [].concat(this.state.forGraphs, id)
+      })
+  }
+
+  renderList = (list) => {
+    return list.map( asteroid => (
       <div
         className="column-4 cardsColection__cards-item"
-        key={ item._id }
+        key={ asteroid._id }
       >
-        <AsteroidCard data={ item } />
+        <AsteroidCard 
+          data={ asteroid } 
+          getID={ this.getID }
+          countIDForGraphs={ this.state.forGraphs.length } 
+        />
       </div>
     ))
   }
 
-  render() {
-    console.log('state', this.state)
+  getCards = () => {
+    if(this.state.potentially_hazardous) {
+      const newList = this.state.asteroids.filter( asteroid => asteroid.is_potentially_hazardous_asteroid == true)
+      return this.renderList(newList)
+    }
 
+    else{
+      return this.renderList(this.state.asteroids)
+    }
+  }
+
+  saveLocalStorage = () => {
+    window.localStorage.setItem('ids',JSON.stringify(this.state.forGraphs))
+  }
+
+  handleHazardous = () => {
+    this.state.potentially_hazardous
+    ? this.setState({potentially_hazardous: false})
+    : this.setState({potentially_hazardous: true})
+  }
+
+  handleMoreVelocity = () => {
+    const moreVelocity = this.state.asteroids.sort((a, b) => {
+      return(
+        b.close_approach_data.relative_velocity.kilometers_per_hour - a.close_approach_data.relative_velocity.kilometers_per_hour
+      )
+    })
+    this.setState({
+    newFilter: moreVelocity
+    })
+    return this.renderList(this.state.newFilter)
+  }
+
+  handlelessVelocity = () => {
+    const lessVelocity = this.state.asteroids.sort((a, b) => {
+      return(
+        a.close_approach_data.relative_velocity.kilometers_per_hour - b.close_approach_data.relative_velocity.kilometers_per_hour
+      )
+    })
+    this.setState({
+    newFilter: lessVelocity
+    })
+    return this.renderList(this.state.newFilter)
+  }
+  
+  handlemoreSighting = () => {
+    const lessVelocity = this.state.asteroids.sort((a, b) => {
+      return(
+        b.orbital_data.first_observation_date - a.orbital_data.first_observation_date
+      )
+    })
+    this.setState({
+      newFilter: lessVelocity
+    })
+    return this.renderList(this.state.newFilter)
+  }
+
+  handlelessSighting = () => {
+    const lessVelocity = this.state.asteroids.sort((a, b) => {
+      return(
+        a.orbital_data.last_observation_date - b.orbital_data.last_observation_date
+      )
+    })
+    this.setState({
+      newFilter: lessVelocity
+    })
+    return this.renderList(this.state.newFilter)
+  }
+
+  handlemoreDiameter = () => {
+    const lessVelocity = this.state.asteroids.sort((a, b) => {
+      return(
+        b.estimated_diameter.kilometers.estimated_diameter_max - a.estimated_diameter.kilometers.estimated_diameter_max
+      )
+    })
+    this.setState({
+      newFilter: lessVelocity
+    })
+    return this.renderList(this.state.newFilter)
+  }
+
+  handlelessDiameter = () => {
+    const lessVelocity = this.state.asteroids.sort((a, b) => {
+      return(
+        a.estimated_diameter.kilometers.estimated_diameter_min - b.estimated_diameter.kilometers.estimated_diameter_min
+      )
+    })
+    this.setState({
+      newFilter: lessVelocity
+    })
+    return this.renderList(this.state.newFilter)
+  }
+
+  render() {
     //------------------------ Error
     if(this.state.error) {
       return `Error: ${ this.state.error.message }`
@@ -108,23 +215,33 @@ class Colection extends React.Component {
             </div>
           </div>
           <div className="row cardsColection__options">
-            <div className="column-6 cardsColection__options-switch">
+            <div 
+              className="column-6 cardsColection__options-switch">
               <p className="mr-30">
                 Peligro potencial
               </p>
-              <Switch />
+              <div onClick={ this.handleHazardous }>
+                <Switch />
+              </div>
             </div>
             <div className="column-6">
-              <OrderDropdown />
+              <OrderDropdown 
+              moreVelocity={ this.handleMoreVelocity }
+              lessVelocity={ this.handlelessVelocity }
+              moreSighting={ this.handlemoreSighting }
+              lessSighting={ this.handlelessSighting }
+              moreDiameter={ this.handlemoreDiameter }
+              lessDiameter={ this.handlelessDiameter }
+              />
             </div>
           </div>
 
-            { //------------------------ logica cardsColection 
-              this.state.asteroids.length &&
-                <div className="row cardsColection__cards">
-                  { this.getCards() }
-                </div>
-            }
+          { //------------------------ logica cardsColection 
+            this.state.asteroids.length &&
+              <div className="row cardsColection__cards">
+                { this.getCards() }
+              </div>
+          }
 
           { //------------------------ Loader
             this.state.loading &&
@@ -132,9 +249,37 @@ class Colection extends React.Component {
               <Loader />
             </div>
           }
-
+          
+          { //------------------------ Buttons para opciones de gráficas
+            this.state.forGraphs.length == 5 &&
+              <div className="row" id="optionGraphs">
+                <div 
+                  className="column-5 text-center"
+                  onClick={() => this.setState({
+                    forGraphs: []
+                  })}
+                >
+                  <Button 
+                    type="normal"
+                    title="Cancelar"
+                  />
+                </div>
+                <div 
+                  className="column-5 text-center"
+                  onClick={ () => this.saveLocalStorage() }
+                >
+                  <Link to="/graphs">
+                    <Button 
+                      type="normal"
+                      title="ir a las gráficas"
+                    />
+                  </Link>
+                </div>
+              </div>
+          }
+          
           { //------------------------ Button traer más
-            !this.state.loading &&
+            (!this.state.loading && !this.state.potentially_hazardous) &&
               <div className="row">
                 <div className="column-12 text-center">
                   <div onClick={() => this.fetchNeos()}>

@@ -7,17 +7,28 @@ import PerihelioPieChart from '../components/graphs/PerihelioPieChart'
 import OrbitalPeriodLineChart from '../components/graphs/OrbitalPeriodLineChart'
 import PerihelioDistanceRadarChart from '../components/graphs/PerihelioDistanceRadarChart'
 import HazardousIndicatorCard from '../components/molecules/HazardousIndicatorCard'
+import fetchByID from '../hoc/fetchByID'
 
-import { URL_IMAGES, URL_IMAGES_REX } from '../components/atoms/UrlImages'
+import { URL_IMAGES_REX } from '../components/atoms/UrlImages'
 
 class Graphs extends React.Component {
   constructor() {
     super()
     this.state = {
-      dataAsteroides: []
+      asteroidsData: []
     }
   }
 
+  componentDidMount() {
+    const listOfAsteroids = JSON.parse(window.localStorage.getItem('ids'))
+    console.log('listOfAsteroids', listOfAsteroids)
+
+    const dataAsteroids = listOfAsteroids.map(item => {
+      fetchByID(item)
+      // console.log('item', item)
+    })
+    console.log('dataAsteroids', dataAsteroids)
+  }
   render() {
     return(
       <div className="graphs">
@@ -140,8 +151,8 @@ class Graphs extends React.Component {
             </div>
             <div className="row">
               <div className="column-10 graphs__hazardous-cards">
-                <HazardousIndicatorCard data={[{name: 'asteroide'}]} peligroso={ true } />
-                <HazardousIndicatorCard data={[{name: 'asteroide'}]} peligroso={ false } />
+                <HazardousIndicatorCard key="1" data={[{name: 'asteroide'}]} peligroso={ true } />
+                <HazardousIndicatorCard key="2" data={[{name: 'asteroide'}]} peligroso={ false } />
               </div>
             </div>
           </div>

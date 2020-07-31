@@ -3,14 +3,7 @@ import '../../scss/molecules/OrderDropdown.scss'
 
 import Arrow from '../icons/Arrow'
 
-const OrderDropdown = () => {
-
-    const moreVelocity = () => alert('moreVelocity')
-    const lessVelocity = () => alert('lessVelocity')
-    const moreSighting = () => alert('moreSighting')
-    const lessSighting = () => alert('lessSighting')
-    const moreDiameter = () => alert('moreDiameter')
-    const lessDiameter = () => alert('lessDiameter')
+const OrderDropdown = (props) => {
 
     return(
         <div className="dropDown">
@@ -29,18 +22,18 @@ const OrderDropdown = () => {
                 </p>
 
                 <div className="dropDown__velocity">
-                    <p className="h2--bb" onClick={ moreVelocity }>Más rápido</p>
-                    <p onClick={ lessVelocity }>Más lento</p>
+                    <p className="h2--bb" onClick={ props.moreVelocity }>Más rápido</p>
+                    <p onClick={ props.lessVelocity }>Más lento</p>
                 </div>
 
                 <div className="dropDown__sighting">
-                    <p className="h2--bb" onClick={ moreSighting }>Más reciente</p>
-                    <p onClick={ lessSighting }>Más remoto</p>
+                    <p className="h2--bb" onClick={ props.moreSighting }>Más reciente</p>
+                    <p onClick={ props.lessSighting }>Más remoto</p>
                 </div>
 
                 <div className="dropDown__diameter">
-                    <p className="h2--bb" onClick={ moreDiameter }>Máximo</p>
-                    <p onClick={ lessDiameter }>Mínimo</p>
+                    <p className="h2--bb" onClick={ props.moreDiameter }>Máximo</p>
+                    <p onClick={ props.lessDiameter }>Mínimo</p>
                 </div>
             </div>
         </div>

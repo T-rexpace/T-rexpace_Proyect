@@ -8,7 +8,6 @@ import imageDemo from '../../images/demoAsteroide.jpg'
 import { URL_IMAGES_REX, URL_IMAGES } from '../atoms/UrlImages'
 
 const AsteroidCard = (props) => {
-	console.log(props)
 	const {
 		_id,
 		name,
@@ -49,7 +48,7 @@ const AsteroidCard = (props) => {
 			<div className="asteroidCard__details">
 				<h3>{ name }</h3>
 				<div>
-					<p className="asteroidCard__details-title">Fecha de avistamiento</p>
+					<p className="asteroidCard__details-title title-hover">Fecha de avistamiento</p>
 					<div className="asteroidCard__details-date">
 						<p><small>
 							Primera
@@ -64,16 +63,29 @@ const AsteroidCard = (props) => {
 					</div>
 				</div>
 				<div>
-					<p className="asteroidCard__details-title">Diametro</p>
+					<p className="asteroidCard__details-title title-hover">Diametro</p>
 					<div className="asteroidCard__details-diameter">
 						<p><small>mínimo: <br /> { estimated_diameter_min.toFixed(4) } km</small></p>
 						<p><small>máximo: <br /> { estimated_diameter_max.toFixed(4) } km</small></p>
 					</div>
 				</div>
-				<Checkbox 
-					label="Comparar"
-					id={ _id }
-				/>
+				<div className="asteroidCard__details-checkbox">
+				{(props.countIDForGraphs < 5)
+				?
+					<div onClick={ () => props.getID(_id) }>
+						<Checkbox 
+							label="Comparar"
+							id={ _id }
+						/>
+					</div>
+				:
+					<a href="#optionGraphs" className="title-hover text-uppercase">
+						<small>
+							ver opciones
+						</small>
+					</a>
+				}
+				</div>
 			</div>
 		</div>
 	)
