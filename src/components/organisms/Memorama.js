@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useNearScreen } from '../../hooks/useNearScreen'
 
 import '../../scss/organisms/Memorama.scss'
@@ -18,10 +19,12 @@ const Memorama = () => {
                 Pon a prueba tu<br />
                 <span>memoria</span>
               </h2>
-              <Button
-                type="normal"
-                title="Acepta el reto"
-              />
+              <Link to="/memorama">
+                <Button
+                  type="normal"
+                  title="Acepta el reto"
+                />
+              </Link>
             </div>
             <div className="column-4">
               <figure>
