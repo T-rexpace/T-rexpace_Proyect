@@ -10,9 +10,21 @@ import { URL_IMAGES_REX } from '../atoms/UrlImages'
 const AsteroidsDetailsComponent = ({ id, data: { getNeos = [] }}) => {
   const [isSelected, setIsSelected] = useState(false)
 
-  const handleClick = e => {
+  const renderAsteroid = (asteroid) => {
+    if (asteroid === getNeos[0]._id) {
+      return <AsteroidCard data={ getNeos[0] } />
+    }
+  }
+
+  const handleClick = event => {
     setIsSelected(true)
-    console.log('clicked')
+    const selectedAsteroid = event.target.id
+    renderAsteroid(selectedAsteroid)
+
+    console.log(selectedAsteroid)
+    console.log(getNeos[0]._id)
+
+    return renderAsteroid()
   }
 
   return(
@@ -28,7 +40,7 @@ const AsteroidsDetailsComponent = ({ id, data: { getNeos = [] }}) => {
           </div>
           <div className="column-4">
             {
-              isSelected ? <AsteroidCard data={ getNeos } /> : <div className="T-rexContainer text-center">
+              isSelected ? <AsteroidCard data={ getNeos[0] } /> : <div className="T-rexContainer text-center">
                 <figure>
                   <img
                     src={ `${URL_IMAGES_REX}t-rex-seleccion-de-asteroides.svg` }
