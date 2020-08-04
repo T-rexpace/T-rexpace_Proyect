@@ -1,6 +1,7 @@
 @import '../styles.scss';
 
 .welcome {
+  height: 715px;
   &__text {
     margin-top: $Spacing-Large;
     & button {
