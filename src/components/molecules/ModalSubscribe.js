@@ -25,9 +25,23 @@ const ModalSubscribe = (props) => {
           Descubre cada mes los asteroides más impresionantes
         </p>
         <form action="https://gmail.us17.list-manage.com/subscribe/post?u=9cbf3c59ac1d81d793f4fe0e5&amp;id=7066a29eeb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          <Input label="Nombre completo" />
-          <Input type="email" label="Correo electronico" />
-          <Button type="normal" />
+          <Input
+            label="Nombre completo"
+            id="mce-FNAME"
+            name="FNAME"
+          />
+          <Input
+            type="email"
+            label="Correo electronico"
+            name="EMAIL"
+            id="mce-EMAIL"
+          />
+          <Button
+            type="normal"
+            value="Subscribe"
+            name="subscribe"
+            id="mc-embedded-subscribe"
+          />
         </form>
       </div>
     </div>,

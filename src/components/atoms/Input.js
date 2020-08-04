@@ -10,6 +10,8 @@ const Input = (props) => {
         placeholder={ props.placeholder || props.label || "Placeholder" }
         type={ props.type || "text" }
         name={ props.label }
+        id={ props.id }
+        name={ props.name }
       />
     </div>
   )
