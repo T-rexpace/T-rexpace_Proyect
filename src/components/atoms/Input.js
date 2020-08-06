@@ -8,8 +8,10 @@ const Input = (props) => {
       <input
         autoFocus={ props.active }
         placeholder={ props.placeholder || props.label || "Placeholder" }
-        type="text" 
-        name={ props.label } 
+        type={ props.type || "text" }
+        name={ props.label }
+        id={ props.id }
+        name={ props.name }
       />
     </div>
   )

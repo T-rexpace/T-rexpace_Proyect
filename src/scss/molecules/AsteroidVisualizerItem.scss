@@ -8,6 +8,7 @@
   border: none;
   color: $Color-Grayscale-1;
   background-color: transparent;
+  cursor: pointer;
   user-select: none;
 
   &:nth-of-type(1) {
@@ -39,7 +40,12 @@
     bottom: 200px;
   }
 
+  &__name {
+    z-index: -1;
+  }
+
   &__dot {
+    z-index: -2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,11 +53,11 @@
     height: 30px;
     margin-top: $Spacing-ExtraSmall;
     border-radius: 50%;
-    cursor: pointer;
     background: radial-gradient(circle, rgba(234, 82, 70, 1) 0%, rgba(209, 6, 106, 1) 100%);
   }
 
   & .wave {
+    z-index: -2;
     width: 30px;
     height: 30px;
     opacity: .5;
@@ -62,6 +68,10 @@
   }
 }
 
-.AsteroidVisualizerItem:focus {
-  outline: 0;
+.AsteroidVisualizerItem {
+  z-index: 1000;
+
+  &:focus {
+    outline: 0;
+  }
 }

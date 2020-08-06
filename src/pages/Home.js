@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react'
 
+import ModalSubscribe from '../components/molecules/ModalSubscribe'
 import ScrollDown from '../components/atoms/ScrollDown'
 import ScrollUp from '../components/atoms/ScrollUp'
 import { AsteroidsDetails } from '../components/organisms/AsteroidsDetails'
@@ -24,6 +25,7 @@ const Home = () => {
 
   return(
     <Fragment>
+      <ModalSubscribe />
       <section className="Welcome" id="welcomeSection">
         { !ShowUp && <ScrollDown /> }
         <ScrollUp id="#welcomeSection" />
