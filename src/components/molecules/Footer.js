@@ -1,5 +1,4 @@
 import React from 'react'
-
 import '../../scss/organisms/Footer.scss'
 
 const Footer = () => {

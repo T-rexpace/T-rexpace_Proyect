@@ -7,18 +7,18 @@ import Checkbox from '../atoms/Checkbox'
 import Logotipo from '../atoms/Logotipo'
 
 const ModalBirthday = () => {
-    return(
-        <div className="modalBirthday">
-            <Logotipo />
-            <p>
-                Los que cumplen en (mes) tienen su propio asteroide. ¡Obtén el tuyo!
-            </p>
-            <Input label="Nombre completo" />
-            <Input label="Correo electronico" />
-            <Checkbox label="Suscribirme" />
-            <Button type="normal" />
-        </div>
-    )
+  return(
+    <div className="modalBirthday">
+      <Logotipo />
+      <p>
+        Los que cumplen en (mes) tienen su propio asteroide. ¡Obtén el tuyo!
+      </p>
+      <Input label="Nombre completo" />
+      <Input label="Correo electronico" />
+      <Checkbox label="Suscribirme" />
+      <Button type="normal" />
+    </div>
+  )
 }
 
 export default ModalBirthday

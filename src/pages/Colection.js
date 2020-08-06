@@ -19,10 +19,9 @@ class Colection extends React.Component {
       forGraphs: [],
       newFilter: [],
       potentially_hazardous: false,
-      velocity: 0
     }
   }
-
+// Consulta para traer la data de las cards
   fetchNeos = async () => {
     this.setState({loading: true, error: null})
 
@@ -83,14 +82,15 @@ class Colection extends React.Component {
   componentDidMount() {
     this.fetchNeos()
   }
-
+// De la card seleccionada, toma el id del asteroide y la almacena en el estado, en el array forGraphs
   getID =(id) =>{
     !this.state.forGraphs.includes(id) &&
       this.setState({
         forGraphs: [].concat(this.state.forGraphs, id)
       })
   }
-
+// Se recibe una lista y va a renderizar una card por cada elemento
+// En cada card se envían el objeto asteroide, la funcion getID y el contador del estado de forGraphs
   renderList = (list) => {
     return list.map( asteroid => (
       <div
@@ -105,28 +105,27 @@ class Colection extends React.Component {
       </div>
     ))
   }
-
+// Dependiendo de si existe o no el filtro de peligro potencial, se envía una lista para renderizar las cards
   getCards = () => {
     if(this.state.potentially_hazardous) {
       const newList = this.state.asteroids.filter( asteroid => asteroid.is_potentially_hazardous_asteroid == true)
       return this.renderList(newList)
     }
-
     else{
       return this.renderList(this.state.asteroids)
     }
   }
-
+// Almacena en localStorage el array de ID's para pasar a la pagina graphs y realizar otra consulta
   saveLocalStorage = () => {
     window.localStorage.setItem('ids',JSON.stringify(this.state.forGraphs))
   }
-
+// Cambia el estado de potencialmente peligroso para aplicar el filtro
   handleHazardous = () => {
     this.state.potentially_hazardous
     ? this.setState({potentially_hazardous: false})
     : this.setState({potentially_hazardous: true})
   }
-
+// Aplica el orden descendente de velocidad
   handleMoreVelocity = () => {
     const moreVelocity = this.state.asteroids.sort((a, b) => {
       return(
@@ -138,7 +137,7 @@ class Colection extends React.Component {
     })
     return this.renderList(this.state.newFilter)
   }
-
+// Aplica el orden ascendente de velocidad
   handlelessVelocity = () => {
     const lessVelocity = this.state.asteroids.sort((a, b) => {
       return(
@@ -150,11 +149,11 @@ class Colection extends React.Component {
     })
     return this.renderList(this.state.newFilter)
   }
-  
+// Aplica el orden descendente de avistamiento
   handlemoreSighting = () => {
     const lessVelocity = this.state.asteroids.sort((a, b) => {
       return(
-        b.orbital_data.first_observation_date - a.orbital_data.first_observation_date
+        new Date(b.orbital_data.last_observation_date) - new Date(a.orbital_data.last_observation_date)
       )
     })
     this.setState({
@@ -162,11 +161,11 @@ class Colection extends React.Component {
     })
     return this.renderList(this.state.newFilter)
   }
-
+// Aplica el orden ascendente de avistamiento
   handlelessSighting = () => {
     const lessVelocity = this.state.asteroids.sort((a, b) => {
       return(
-        a.orbital_data.last_observation_date - b.orbital_data.last_observation_date
+        new Date(a.orbital_data.last_observation_date) - new Date(b.orbital_data.last_observation_date)
       )
     })
     this.setState({
@@ -174,7 +173,7 @@ class Colection extends React.Component {
     })
     return this.renderList(this.state.newFilter)
   }
-
+// Aplica el orden descendente de diametro
   handlemoreDiameter = () => {
     const lessVelocity = this.state.asteroids.sort((a, b) => {
       return(
@@ -186,7 +185,7 @@ class Colection extends React.Component {
     })
     return this.renderList(this.state.newFilter)
   }
-
+// Aplica el orden ascendente de diametro
   handlelessDiameter = () => {
     const lessVelocity = this.state.asteroids.sort((a, b) => {
       return(
@@ -210,8 +209,8 @@ class Colection extends React.Component {
         <div className="wraper">
           <div className="row cardsColection__head">
             <div className="column-12">
-              <h2>Más de 200 asteroides</h2>
-              <h1>Toda la serie</h1>
+              <h2 className="title-hover">Más de 150 Asteroides</h2>
+              <h1 className="title-hover">Toda la serie</h1>
             </div>
           </div>
           <div className="row cardsColection__options">
@@ -220,8 +219,10 @@ class Colection extends React.Component {
               <p className="mr-30">
                 Peligro potencial
               </p>
-              <div onClick={ this.handleHazardous }>
-                <Switch />
+              <div>
+                <Switch
+                  turn={ this.handleHazardous }
+                />
               </div>
             </div>
             <div className="column-6">

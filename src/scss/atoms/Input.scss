@@ -1,24 +1,24 @@
 @import '../globals.scss';
 
 .form {
-    label {
-        display: block;
-        margin-bottom: $Spacing-ExtraSmall;
-        font-size: $Font-Small;
-    }
-    input {
-        padding: $Spacing-ExtraSmall;
-        border-radius: $Spacing-ExtraSmall;
-        border: 2px solid $Color-Grayscale-6;
-        font-size: $Font-Paragraph;
-        color: $Color-Grayscale-6;
-        outline: none;
-    }
-    input:focus {
-        border: 2px solid $Color-Secondary;
-        box-shadow: 0 0 5px $Color-Secondary;
-    }
-    ::placeholder {
-        color: $Color-Grayscale-4;
-    }
+  label {
+    display: block;
+    margin-bottom: $Spacing-ExtraSmall;
+    font-size: $Font-Small;
+  }
+  input {
+    padding: $Spacing-ExtraSmall;
+    border-radius: $Spacing-ExtraSmall;
+    border: 2px solid $Color-Grayscale-6;
+    font-size: $Font-Paragraph;
+    color: $Color-Grayscale-6;
+    outline: none;
+  }
+  input:focus {
+    border: 2px solid $Color-Secondary;
+    box-shadow: 0 0 5px $Color-Secondary;
+  }
+  ::placeholder {
+    color: $Color-Grayscale-4;
+  }
 }

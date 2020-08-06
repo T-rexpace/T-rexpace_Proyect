@@ -1,12 +1,14 @@
 @import '../globals.scss';
 
 .asteroidCard {
-	max-width: 320px;
+	max-width: 330px;
 	min-width: 250px;
-	height: 460px;
+	height: 470px;
 	border-radius: $Border-Radius * 2;
 	color: $Color-Grayscale-1;
-	background-color: $Color-Primary-Light-1;
+  background-color: $Color-Primary-Light-1;
+  // background-color: rgba(64, 44, 92, 0.6);
+  // box-shadow: 0 0 10px $Color-Grayscale-1;
 &__picture {
 		position: relative;
 		height: 160px;
@@ -32,7 +34,8 @@
 			width: 65px;
 			height: 65px;
 			border-radius: 100%;
-			background: $Gradient;
+      background: $Gradient;
+      box-shadow: 0 0 10px $Color-Secondary;
 		}
 		&-velocity p {
 			margin-top: $Spacing-Small - 2;
@@ -45,7 +48,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		padding: $Spacing-Small;
-		height: 300px;
+		height: 320px;
 		p {
 			flex: 1;
 			margin: 0;

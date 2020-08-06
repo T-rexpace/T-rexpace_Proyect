@@ -13,6 +13,7 @@
     flex-wrap: wrap;
   }
   &__cards-item {
-    width: auto;
+    display: flex;
+    justify-content: center;
   }
 }

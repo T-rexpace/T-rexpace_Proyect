@@ -1,13 +1,13 @@
 @import '../globals.scss';
 
 .container__buttons {
+  display: flex;
+  justify-content: space-between;
+  height: $Spacing-ExtraLarge*5;
+  & section {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    height: $Spacing-ExtraLarge*5;
-    & section {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
+    align-items: center;
+  }
 }
