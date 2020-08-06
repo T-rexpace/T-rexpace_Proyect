@@ -8,34 +8,34 @@ const fetchByID = async id => {
         'Accept': 'application/json',
       },
       body: JSON.stringify({query: `{ getNeo(id: ${id}) { 
-          _id, 
-          name, 
-          absolute_magnitude_h, 
-          image,
-          is_potentially_hazardous_asteroid, 
-          estimated_diameter { 
-            kilometers { 
-              estimated_diameter_min, 
-              estimated_diameter_max
-            } 
-          }, 
-          close_approach_data {
-            close_approach_date,
-            epoch_date_close_approach,
-            relative_velocity {
-              kilometers_per_hour
-            },
-            miss_distance {
-              kilometers
-            }
-          },
-          orbital_data {
-            first_observation_date,
-            last_observation_date
-            orbital_period,
-            perihelion_distance,
+        _id, 
+        name, 
+        absolute_magnitude_h, 
+        image,
+        is_potentially_hazardous_asteroid, 
+        estimated_diameter { 
+          kilometers { 
+            estimated_diameter_min, 
+            estimated_diameter_max
           } 
-        } }`})
+        }, 
+        close_approach_data {
+          close_approach_date,
+          epoch_date_close_approach,
+          relative_velocity {
+            kilometers_per_hour
+          },
+          miss_distance {
+            kilometers
+          }
+        },
+        orbital_data {
+          first_observation_date,
+          last_observation_date
+          orbital_period,
+          perihelion_distance,
+        } 
+      } }`})
     })
 
     const response = await dataNeos.json

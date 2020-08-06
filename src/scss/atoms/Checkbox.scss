@@ -1,43 +1,43 @@
 @import '../globals.scss';
 
 .checkbox {
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    input[type="checkbox"] + label:before {
-        content: "";
-        width: $Spacing-Small;
-        height: $Spacing-Small;
-        float: left;
-        margin: .8em.5em 0 0;
-        border: 2px solid $Color-Grayscale-4;
-        border-radius: $Spacing-ExtraSmall/2;
-        background: $Color-Grayscale-1;
-    }
-    input[type="checkbox"]:checked + label:before {
-        border-color: $Color-Secondary;
-    }
-    input[type="checkbox"]:checked + label:after {
-        content: "";
-        width: 12px;
-        height: 6px;
-        float: left;
-        margin-left: -1.5em;
-        margin-top: 1.2em;
-        border: 3px solid $Color-Secondary;
-        border-right: 0;
-        border-top: 0;
-        transform: rotate(-55deg);
-    }
-    input[type="checkbox"] {
-        display: none;
-    }
-    input[type="checkbox"] + label {
-        font-weight: bold;
-        line-height: 3em;
-        color: $Color-Grayscale-4;
-    }
-    input[type="checkbox"]:checked + label {
-        color: $Color-Secondary;
-    }
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  input[type="checkbox"] + label:before {
+    content: "";
+    width: $Spacing-Small;
+    height: $Spacing-Small;
+    float: left;
+    margin: .8em.5em 0 0;
+    border: 2px solid $Color-Grayscale-4;
+    border-radius: $Spacing-ExtraSmall/2;
+    background: $Color-Grayscale-1;
+  }
+  input[type="checkbox"]:checked + label:before {
+    border-color: $Color-Secondary;
+  }
+  input[type="checkbox"]:checked + label:after {
+    content: "";
+    width: 12px;
+    height: 6px;
+    float: left;
+    margin-left: -1.5em;
+    margin-top: 1.2em;
+    border: 3px solid $Color-Secondary;
+    border-right: 0;
+    border-top: 0;
+    transform: rotate(-55deg);
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  input[type="checkbox"] + label {
+    font-weight: bold;
+    line-height: 3em;
+    color: $Color-Grayscale-4;
+  }
+  input[type="checkbox"]:checked + label {
+    color: $Color-Secondary;
+  }
 }

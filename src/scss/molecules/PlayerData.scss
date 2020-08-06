@@ -1,11 +1,11 @@
 @import '../globals.scss';
 
 .playerData {
-    display: flex;
-    justify-content: space-between;
-    width: 500px;
-    border-radius: $Border-Radius;
-    padding: $Spacing-ExtraSmall $Spacing-Small;
-    margin: $Spacing-ExtraSmall;;
-    background-color: $Color-Grayscale-1;
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  border-radius: $Border-Radius;
+  padding: $Spacing-ExtraSmall $Spacing-Small;
+  margin: $Spacing-ExtraSmall;;
+  background-color: $Color-Grayscale-1;
 }

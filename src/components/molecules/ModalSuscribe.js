@@ -1,24 +1,22 @@
 import React from 'react'
-import '../../scss/molecules/ModalBirthday.scss'
+import '../../scss/molecules/ModalSuscribe.scss'
 
 import Button from '../atoms/Button'
 import Input from '../atoms/Input'
-import Checkbox from '../atoms/Checkbox'
 import Logotipo from '../atoms/Logotipo'
 
-const ModalBirthday = () => {
+const ModalSuscribe = () => {
   return(
-    <div className="modalBirthday">
+    <div className="modalSuscribe">
       <Logotipo />
       <p>
-        Los que cumplen en (mes) tienen su propio asteroide. ¡Obtén el tuyo!
+        Descubre cada mes los asteroides más impresionantes
       </p>
       <Input label="Nombre completo" />
       <Input label="Correo electronico" />
-      <Checkbox label="Suscribirme" />
       <Button type="normal" />
     </div>
   )
 }
 
-export default ModalBirthday
+export default ModalSuscribe

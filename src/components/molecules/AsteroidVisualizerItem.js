@@ -1,5 +1,4 @@
 import React from 'react'
-
 import '../../scss/molecules/AsteroidVisualizerItem.scss'
 
 const AsteroidVisualizerItem = ({ name, handleClick, id }) => {
