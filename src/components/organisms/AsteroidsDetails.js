@@ -3,28 +3,25 @@ import fetchAsteroids from '../../hoc/fetchAsteroids'
 
 import '../../scss/organisms/AsteroidsDetails.scss'
 import { AsteroidVisualizer } from '../organisms/AsteroidVisualizer'
-import AsteroidCard from '../molecules/AsteroidCard'
+import AsteroidCardWithQuery from '../../container/AsteroidCardWithQuery'
 import Button from '../atoms/Button'
 import { URL_IMAGES_REX } from '../atoms/UrlImages'
 
 const AsteroidsDetailsComponent = ({ id, data: { getNeos = [] }}) => {
   const [isSelected, setIsSelected] = useState(false)
+  const [asteroidSelected, setAsteroidSelected] = useState(undefined)
 
-  const renderAsteroid = (asteroid) => {
-    if (asteroid === getNeos[0]._id) {
-      return <AsteroidCard data={ getNeos[0] } />
-    }
+  const renderAsteroidCard = (asteroidId) => {
+    return <AsteroidCardWithQuery id={asteroidId} />
   }
 
   const handleClick = event => {
     setIsSelected(true)
     const selectedAsteroid = event.target.id
-    renderAsteroid(selectedAsteroid)
+    setAsteroidSelected(selectedAsteroid)
 
     console.log(selectedAsteroid)
     console.log(getNeos[0]._id)
-
-    return renderAsteroid()
   }
 
   return(
@@ -40,7 +37,9 @@ const AsteroidsDetailsComponent = ({ id, data: { getNeos = [] }}) => {
           </div>
           <div className="column-4">
             {
-              isSelected ? <AsteroidCard data={ getNeos[0] } /> : <div className="T-rexContainer text-center">
+              isSelected
+                ? renderAsteroidCard(asteroidSelected)
+                : <div className="T-rexContainer text-center">
                 <figure>
                   <img
                     src={ `${URL_IMAGES_REX}t-rex-seleccion-de-asteroides.svg` }
