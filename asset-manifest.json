@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/T-rexpace_Proyect/static/css/main.07c57d6e.chunk.css",
-    "main.js": "/T-rexpace_Proyect/static/js/main.cf247a77.chunk.js",
-    "main.js.map": "/T-rexpace_Proyect/static/js/main.cf247a77.chunk.js.map",
+    "main.css": "/T-rexpace_Proyect/static/css/main.2a4f6be7.chunk.css",
+    "main.js": "/T-rexpace_Proyect/static/js/main.f45a4ed5.chunk.js",
+    "main.js.map": "/T-rexpace_Proyect/static/js/main.f45a4ed5.chunk.js.map",
     "runtime-main.js": "/T-rexpace_Proyect/static/js/runtime-main.68780dfb.js",
     "runtime-main.js.map": "/T-rexpace_Proyect/static/js/runtime-main.68780dfb.js.map",
-    "static/js/2.fb49c505.chunk.js": "/T-rexpace_Proyect/static/js/2.fb49c505.chunk.js",
-    "static/js/2.fb49c505.chunk.js.map": "/T-rexpace_Proyect/static/js/2.fb49c505.chunk.js.map",
+    "static/js/2.32c6bb0c.chunk.js": "/T-rexpace_Proyect/static/js/2.32c6bb0c.chunk.js",
+    "static/js/2.32c6bb0c.chunk.js.map": "/T-rexpace_Proyect/static/js/2.32c6bb0c.chunk.js.map",
     "index.html": "/T-rexpace_Proyect/index.html",
-    "precache-manifest.17cc392e158bcdda3484010bff5c7cfe.js": "/T-rexpace_Proyect/precache-manifest.17cc392e158bcdda3484010bff5c7cfe.js",
+    "precache-manifest.2905b4cc1cc7e881ce38070573b3e8f0.js": "/T-rexpace_Proyect/precache-manifest.2905b4cc1cc7e881ce38070573b3e8f0.js",
     "service-worker.js": "/T-rexpace_Proyect/service-worker.js",
-    "static/css/main.07c57d6e.chunk.css.map": "/T-rexpace_Proyect/static/css/main.07c57d6e.chunk.css.map",
-    "static/js/2.fb49c505.chunk.js.LICENSE.txt": "/T-rexpace_Proyect/static/js/2.fb49c505.chunk.js.LICENSE.txt",
+    "static/css/main.2a4f6be7.chunk.css.map": "/T-rexpace_Proyect/static/css/main.2a4f6be7.chunk.css.map",
+    "static/js/2.32c6bb0c.chunk.js.LICENSE.txt": "/T-rexpace_Proyect/static/js/2.32c6bb0c.chunk.js.LICENSE.txt",
     "static/media/demoAsteroide.jpg": "/T-rexpace_Proyect/static/media/demoAsteroide.5828f3e7.jpg",
     "static/media/logotipo-negativo-color-corporativo.svg": "/T-rexpace_Proyect/static/media/logotipo-negativo-color-corporativo.841ef2d6.svg",
     "static/media/planeta-tierra.png": "/T-rexpace_Proyect/static/media/planeta-tierra.a488a13c.png",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.68780dfb.js",
-    "static/js/2.fb49c505.chunk.js",
-    "static/css/main.07c57d6e.chunk.css",
-    "static/js/main.cf247a77.chunk.js"
+    "static/js/2.32c6bb0c.chunk.js",
+    "static/css/main.2a4f6be7.chunk.css",
+    "static/js/main.f45a4ed5.chunk.js"
   ]
 }
