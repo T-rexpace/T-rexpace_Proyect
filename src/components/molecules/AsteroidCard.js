@@ -18,7 +18,7 @@ const AsteroidCard = (props) => {
 		close_approach_data:{relative_velocity:{ kilometers_per_hour }},
 		estimated_diameter:{kilometers:{ estimated_diameter_min }},
 		estimated_diameter:{kilometers:{ estimated_diameter_max }},
-	} = props.data
+	} = props.data;
 
 	return (
 		<div className="asteroidCard">

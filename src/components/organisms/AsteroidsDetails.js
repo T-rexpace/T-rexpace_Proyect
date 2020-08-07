@@ -17,10 +17,15 @@ const AsteroidsDetailsComponent = ({ id, data: { getNeos = [] }}) => {
 
   const handleClick = event => {
     setIsSelected(true)
-    const selectedAsteroid = event.target.id
-    setAsteroidSelected(selectedAsteroid)
+    let selectedAsteroid;
+    if (event.target.classList[0] === 'AsteroidVisualizerItem__name')
+    {
+      selectedAsteroid = event.target.parentNode.id;
+    } else {
+      selectedAsteroid = event.target.parentNode.parentNode.id;
+    }
 
-    console.log(selectedAsteroid)
+    setAsteroidSelected(selectedAsteroid)
   }
 
   return(
