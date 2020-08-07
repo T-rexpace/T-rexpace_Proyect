@@ -37,16 +37,15 @@ const GET_ASTEROID = gql`
 const renderProp = ({ loading, error, data }) => {
   if (loading) return <Loader />
   if (error) {
-    console.log(error)
     return <p>Tuvimos un error buscando tu asteroide. Recarga de nuevo la página y vuelve a intentar.</p>
   }
-    return <AsteroidCard data={ data }/>
+  return <AsteroidCard data={ data }/>
 }
 
-const AsteroidCardWithQuery = ({ id }) => (
-  <Query query={GET_ASTEROID} variables={{ id }}>
+const AsteroidCardWithQuery = ({ id }) => {
+  return <Query query={GET_ASTEROID} variables={{ id }}>
     {renderProp}
   </Query>
-)
+}
 
 export default AsteroidCardWithQuery

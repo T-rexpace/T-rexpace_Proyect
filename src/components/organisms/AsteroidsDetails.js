@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import fetchAsteroids from '../../hoc/fetchAsteroids'
 
 import '../../scss/organisms/AsteroidsDetails.scss'
@@ -21,7 +21,6 @@ const AsteroidsDetailsComponent = ({ id, data: { getNeos = [] }}) => {
     setAsteroidSelected(selectedAsteroid)
 
     console.log(selectedAsteroid)
-    console.log(getNeos[0]._id)
   }
 
   return(
