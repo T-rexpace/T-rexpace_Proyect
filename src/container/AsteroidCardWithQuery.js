@@ -39,7 +39,8 @@ const renderProp = ({ loading, error, data }) => {
   if (error) {
     return <p>Tuvimos un error buscando tu asteroide. Recarga de nuevo la página y vuelve a intentar.</p>
   }
-  return <AsteroidCard data={ data }/>
+  const { getNeo } = data;
+  return <AsteroidCard data={ getNeo }/>
 }
 
 const AsteroidCardWithQuery = ({ id }) => {
