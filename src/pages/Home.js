@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 
 import ModalSubscribe from '../components/molecules/ModalSubscribe'
 import ScrollDown from '../components/atoms/ScrollDown'
@@ -25,6 +26,10 @@ const Home = () => {
 
   return(
     <Fragment>
+      <Helmet>
+        <title>T-REXPACE - Tu observatorio de asteroides</title>
+        <meta name='description' content='Con T-REXPACE tendrás un maravilloso viaje por el cosmos de la mano de un gran amigo de 150 millones de años.' />
+      </Helmet>
       <ModalSubscribe />
       <section className="Welcome" id="welcomeSection">
         { !ShowUp && <ScrollDown /> }
