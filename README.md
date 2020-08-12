@@ -18,7 +18,7 @@ The user start a trip
 
 A guide of 150 million years ago will be the companion on the tour
 
-> If you want to know more about, maybe you are interested read our [identity manual](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/dd032446-b804-407c-a16a-acf65b8d4a06/MANUAL_DE_MARCA_T-REXSPACE_29JUL2020.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20200730%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20200730T050631Z&X-Amz-Expires=86400&X-Amz-Signature=b909bfa0afae25bf0e1bf4daeb14abaf162b794cccc397c71b7c44502cabc8f4&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22MANUAL%2520DE%2520MARCA_T-REXSPACE_29JUL2020.pdf%22 "identity manual")
+> If you want to know more about, maybe you are interested read our [identity manual](https://issuu.com/danielfelipemerchan/docs/manual_de_marca_t-rexspace_29jul2020 "identity manual")
 
 ## 👪 Guide for User
 
