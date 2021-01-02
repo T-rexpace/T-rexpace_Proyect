@@ -2,16 +2,18 @@
 
 .footer {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 80px;
+  padding: $Spacing-Small $Spacing-ExtraLarge;
   font-size: $Font-Paragraph;
   color: $Color-Grayscale-1;
   background-color: $Color-Primary;
 }
 
 .footer p {
-  margin: $Spacing-Normal $Spacing-ExtraLarge;
-
+  margin: 0;
   & span {
     color: $Color-Primary-2;
   }

@@ -33,10 +33,11 @@
     top: $Spacing-Normal;
     right: $Spacing-Normal;
     border: none;
+    cursor: pointer;
     background-color: transparent;
 
     &:focus {
-      border: none;
+      outline: none;
     }
   }
 

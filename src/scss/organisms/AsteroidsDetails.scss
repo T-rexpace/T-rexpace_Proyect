@@ -1,7 +1,7 @@
 .AsteroidsDetails {
   display: flex;
   align-items: center;
-  height: calc(100vh - 160px);
+  height: 100vh;
   min-height: 200px;
 
   &>.wrapper {

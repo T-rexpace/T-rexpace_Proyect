@@ -29,10 +29,7 @@
 		font-size: $Font-Paragraph;
 		text-decoration: none;
 		color: $Color-Grayscale-1;
-		&:hover {
-			text-decoration: underline;
-			cursor: pointer;
-		}
+		cursor: pointer;
 	}
 	.icon {
 		width: $Spacing-Large;

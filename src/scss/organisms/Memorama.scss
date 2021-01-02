@@ -1,7 +1,9 @@
 @import '../styles.scss';
 
 .Memorama {
-  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  height: 100vh;
 
   &>.wrapper {
     opacity: 0;

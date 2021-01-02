@@ -3,16 +3,24 @@
 
 .Layout {
   display: grid;
-  height: 100vh;
+  min-height: 100vh;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-  // grid-template-areas:  "header"
-  //                       "content";
+  grid-template-rows: 80px 1fr;
   &__content {
     color: $Color-Grayscale-1;
     background-color: $Color-Grayscale-5;
     background-image: url('http://ec2-54-234-62-6.compute-1.amazonaws.com:8080/public/images/background-space.jpg');
     background-size: cover;
     overflow-y: scroll;
+
+    & > .wrapper {
+      height: calc(100vh - 160px);
+    }
+
+    & .column-6:nth-of-type(2) {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
   }
 }

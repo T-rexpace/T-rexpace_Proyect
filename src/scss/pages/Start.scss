@@ -1,14 +1,25 @@
 @import '../styles.scss';
+@import '../tokens/typos.scss';
 
 .welcome {
-  height: 715px;
+  height: 100%;
   &__text {
     margin-top: $Spacing-Large;
+    
+    & h1 {
+      font-weight: $Black;
+    }
+
+    & h2 {
+      font-weight: $Regular;
+    }
+
     & button {
       margin: $Spacing-Small 0;
     }
   }
-  &__image img {
-    width: 250px;
+
+  &__imageContainer {
+    width: 260px;
   }
 }
