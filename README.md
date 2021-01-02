@@ -58,6 +58,7 @@ User can:
 - react-apollo: 3.1.5
 - apollo-boost: 0.4.9
 - recharts: 1.8.5
+- react-helmet: 6.1.0
 
 ### Developer Dependencies
 

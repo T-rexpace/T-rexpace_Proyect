@@ -21,7 +21,7 @@ const AsteroidVisualizerComponent = ({ data: { getNeos = [] }, handleClick }) =>
           key={ asteroid._id }
           name={ asteroid.name }
           handleClick={ handleClick }
-          className="first"
+          id={ asteroid._id }
         />)
       }
     </div>
